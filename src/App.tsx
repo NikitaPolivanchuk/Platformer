@@ -1,13 +1,11 @@
-import { useState } from 'react';
+import Game from './core/Game';
+import Player from './entities/Player';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <p>{count}</p>
-      <button onClick={() => setCount(count + 1)}>increment</button>
-    </>
+    <Game>
+      <Player position={{ x: 100, y: 100 }} />
+    </Game>
   );
 }
 
