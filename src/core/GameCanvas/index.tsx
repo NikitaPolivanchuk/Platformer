@@ -53,7 +53,7 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
 
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       entitiesRef.current.forEach((e) => {
-        ctx.fillStyle = '#FFF';
+        ctx.fillStyle = '#000';
         ctx.fillRect(e.position.x, e.position.y, 32, 32);
       });
 
@@ -86,7 +86,7 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
         ref={canvasRef}
         width={800}
         height={600}
-        style={{ border: '1px solid white' }}
+        style={{ border: '1px solid black' }}
       />
       <GameCanvasContext.Provider value={contextValue}>
         {children}
