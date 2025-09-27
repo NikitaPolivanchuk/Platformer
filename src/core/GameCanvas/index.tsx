@@ -46,15 +46,49 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
     let last = performance.now();
 
     const loop = (time: number) => {
-      const dt = (time - last) / 1000;
+      let dt = (time - last) / 1000;
+      if (dt > 0.05) dt = 0.05;
       last = time;
 
       tickCallbackRef.current.forEach((cb) => cb(dt));
 
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       entitiesRef.current.forEach((e) => {
-        ctx.fillStyle = '#000';
-        ctx.fillRect(e.position.x, e.position.y, 32, 32);
+        if (e.sprite?.image) {
+          const {
+            image,
+            frame,
+            frameSize,
+            currentAnimation,
+            animations,
+            direction,
+          } = e.sprite;
+          const anim = animations[currentAnimation];
+
+          const dx = e.position.x;
+          const dy = e.position.y;
+          const dw = e.size.width;
+          const dh = e.size.height;
+
+          const sx = frame * frameSize.width;
+          const sy = anim.row * frameSize.height;
+          const sw = frameSize.width;
+          const sh = frameSize.height;
+
+          ctx.save();
+
+          if (direction === 'left') {
+            ctx.scale(-1, 1);
+            ctx.drawImage(image, sx, sy, sw, sh, -(dx + dw), dy, dw, dh);
+          } else {
+            ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
+          }
+
+          ctx.restore();
+        } else {
+          ctx.fillStyle = '#000';
+          ctx.fillRect(e.position.x, e.position.y, e.size.width, e.size.height);
+        }
       });
 
       requestAnimationFrame(loop);
@@ -68,6 +102,7 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
       registerEntity,
       unregisterEntity,
       updateEntity,
+      entities: entitiesRef.current,
       getEntityById,
       registerTick,
     }),

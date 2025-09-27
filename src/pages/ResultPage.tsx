@@ -9,8 +9,8 @@ const ResultPage: FC<ResultPageProps> = ({ onRestart }) => {
     <div>
       <h1>Game completed</h1>
       <div>stats:</div>
-      <div>coins collected: 0</div>
-      <div>levels completed: 0</div>
+      <div>Score: 0</div>
+      <div>Levels completed: 0</div>
       <button onClick={onRestart}>restart</button>
     </div>
   );

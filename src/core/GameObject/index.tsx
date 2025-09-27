@@ -7,6 +7,7 @@ const GameObject: FC<GameObjectProps> = ({
   size,
   position,
   velocity,
+  layer,
   children,
 }) => {
   const identifier = useRef(Symbol('GameObject'));
@@ -14,9 +15,9 @@ const GameObject: FC<GameObjectProps> = ({
 
   useLayoutEffect(() => {
     const id = identifier.current;
-    registerEntity({ id, size, position, velocity });
+    registerEntity({ id, size, position, velocity, layer });
     return () => unregisterEntity(id);
-  }, [position, registerEntity, size, unregisterEntity, velocity]);
+  }, [layer, position, registerEntity, size, unregisterEntity, velocity]);
 
   return (
     <GameObjectContext.Provider value={{ id: identifier.current }}>

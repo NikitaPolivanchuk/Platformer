@@ -2,13 +2,13 @@ import type { FC } from 'react';
 import useGameState from '../../core/GameState/useGameState.ts';
 
 const HUD: FC = () => {
-  const { level, lives, coins } = useGameState();
+  const { level, lives, score } = useGameState();
 
   return (
     <div>
       <div>Level: {level}</div>
       <div>Lives: {lives}</div>
-      <div>Coins: {coins}</div>
+      <div>Score: {score}</div>
     </div>
   );
 };

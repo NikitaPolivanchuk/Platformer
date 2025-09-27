@@ -3,7 +3,7 @@ import useGameCanvas from '../../core/GameCanvas/useGameCanvas.ts';
 import useKeyPress from '../../hooks/useKeyPress.ts';
 import { useLayoutEffect } from 'react';
 
-const ControlScript = () => {
+const MovementController = () => {
   const { id } = useGameObject();
   const { updateEntity, getEntityById, registerTick } = useGameCanvas();
 
@@ -14,11 +14,17 @@ const ControlScript = () => {
   useLayoutEffect(() => {
     const tick = () => {
       const entity = getEntityById(id);
+      if (!entity || !entity.velocity) {
+        return;
+      }
+
+      const speedX = (-Number(leftKey) + Number(rightKey)) * 100;
+      const jumpVelocity = entity.grounded && upKey ? -150 : entity.velocity.y;
 
       updateEntity(id, {
         velocity: {
-          x: (-Number(leftKey) + Number(rightKey)) * 100,
-          y: upKey ? -100 : (entity?.velocity?.y ?? 0),
+          x: speedX,
+          y: jumpVelocity,
         },
       });
     };
@@ -29,4 +35,4 @@ const ControlScript = () => {
   return null;
 };
 
-export default ControlScript;
+export default MovementController;

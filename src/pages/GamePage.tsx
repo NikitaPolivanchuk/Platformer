@@ -3,6 +3,7 @@ import Player from '../entities/Player';
 import type { FC } from 'react';
 import HUD from '../components/HUD';
 import GameState from '../core/GameState';
+import SmoothWall from '../entities/SmoothWall';
 
 type GamePageProps = {
   onFinish: () => void;
@@ -16,6 +17,12 @@ const GamePage: FC<GamePageProps> = ({ onFinish }) => {
         <HUD />
         <GameCanvas>
           <Player position={{ x: 100, y: 100 }} />
+          <SmoothWall position={{ x: 64, y: 200 }} type={0} />
+          <SmoothWall position={{ x: 128, y: 200 }} type={1} />
+          <SmoothWall position={{ x: 192, y: 200 }} type={2} />
+          <SmoothWall position={{ x: 64, y: 264 }} type={6} />
+          <SmoothWall position={{ x: 128, y: 264 }} type={7} />
+          <SmoothWall position={{ x: 192, y: 264 }} type={8} />
         </GameCanvas>
       </GameState>
     </div>

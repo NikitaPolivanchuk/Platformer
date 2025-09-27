@@ -2,10 +2,10 @@ import { createContext } from 'react';
 
 interface GameState {
   level: number;
-  coins: number;
+  score: number;
   lives: number;
   setLevel: (level: number) => void;
-  setCoins: (coins: number) => void;
+  setScore: (score: number) => void;
   setLives: (lives: number) => void;
 }
 

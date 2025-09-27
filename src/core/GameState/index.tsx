@@ -7,12 +7,12 @@ type GameStateProviderProps = {
 
 const GameState: FC<GameStateProviderProps> = ({ children }) => {
   const [level, setLevel] = useState(1);
-  const [coins, setCoins] = useState(0);
+  const [score, setScore] = useState(0);
   const [lives, setLives] = useState(3);
 
   return (
     <GameStateContext.Provider
-      value={{ level, setLevel, coins, setCoins, lives, setLives }}
+      value={{ level, setLevel, score, setScore, lives, setLives }}
     >
       {children}
     </GameStateContext.Provider>
