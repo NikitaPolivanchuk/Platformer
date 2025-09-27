@@ -1,10 +1,10 @@
 import { type FC, useLayoutEffect } from 'react';
 import useGameObject from '../GameObject/useGameObject.ts';
-import useGame from '../Game/useGame.ts';
+import useGameCanvas from '../GameCanvas/useGameCanvas.ts';
 
 const Moveable: FC = () => {
   const { id } = useGameObject();
-  const { updateEntity, getEntityById, registerTick } = useGame();
+  const { updateEntity, getEntityById, registerTick } = useGameCanvas();
 
   useLayoutEffect(() => {
     const tick = (dt: number) => {

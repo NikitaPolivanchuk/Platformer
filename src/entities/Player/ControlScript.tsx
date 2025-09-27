@@ -1,11 +1,11 @@
 import useGameObject from '../../core/GameObject/useGameObject.ts';
-import useGame from '../../core/Game/useGame.ts';
+import useGameCanvas from '../../core/GameCanvas/useGameCanvas.ts';
 import useKeyPress from '../../hooks/useKeyPress.ts';
 import { useLayoutEffect } from 'react';
 
 const ControlScript = () => {
   const { id } = useGameObject();
-  const { updateEntity, getEntityById, registerTick } = useGame();
+  const { updateEntity, getEntityById, registerTick } = useGameCanvas();
 
   const leftKey = useKeyPress(['ArrowLeft', 'a']);
   const rightKey = useKeyPress(['ArrowRight', 'd']);

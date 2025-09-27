@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
 
-export default interface GameProps {
+export default interface GameCanvasProps {
   children?: ReactNode;
 }

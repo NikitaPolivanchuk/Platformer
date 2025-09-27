@@ -1,7 +1,7 @@
 import { type FC, useLayoutEffect, useRef } from 'react';
 import type GameObjectProps from './GameObjectProps.ts';
 import GameObjectContext from './GameObjectContext.ts';
-import useGame from '../Game/useGame.ts';
+import useGameCanvas from '../GameCanvas/useGameCanvas.ts';
 
 const GameObject: FC<GameObjectProps> = ({
   size,
@@ -10,7 +10,7 @@ const GameObject: FC<GameObjectProps> = ({
   children,
 }) => {
   const identifier = useRef(Symbol('GameObject'));
-  const { registerEntity, unregisterEntity } = useGame();
+  const { registerEntity, unregisterEntity } = useGameCanvas();
 
   useLayoutEffect(() => {
     const id = identifier.current;

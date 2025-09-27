@@ -1,9 +1,9 @@
 import { type FC, useCallback, useLayoutEffect, useMemo, useRef } from 'react';
 import type Entity from '../types/Entity.ts';
-import { GameContext } from './GameContext.ts';
-import type GameProps from './GameProps.ts';
+import { GameCanvasContext } from './GameCanvasContext.ts';
+import type GameCanvasProps from './GameCanvasProps.ts';
 
-const Game: FC<GameProps> = ({ children }) => {
+const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const entitiesRef = useRef<Entity[]>([]);
 
@@ -53,7 +53,7 @@ const Game: FC<GameProps> = ({ children }) => {
 
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       entitiesRef.current.forEach((e) => {
-        ctx.fillStyle = '#000';
+        ctx.fillStyle = '#FFF';
         ctx.fillRect(e.position.x, e.position.y, 32, 32);
       });
 
@@ -81,18 +81,18 @@ const Game: FC<GameProps> = ({ children }) => {
   );
 
   return (
-    <div>
+    <>
       <canvas
         ref={canvasRef}
         width={800}
         height={600}
-        style={{ border: '1px solid black' }}
+        style={{ border: '1px solid white' }}
       />
-      <GameContext.Provider value={contextValue}>
+      <GameCanvasContext.Provider value={contextValue}>
         {children}
-      </GameContext.Provider>
-    </div>
+      </GameCanvasContext.Provider>
+    </>
   );
 };
 
-export default Game;
+export default GameCanvas;
