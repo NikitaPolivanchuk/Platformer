@@ -1,6 +1,9 @@
 import { createContext } from 'react';
-import type GameObjectContextType from './GameObjectContextType.ts';
 
-const GameObjectContext = createContext<GameObjectContextType | null>(null);
+export interface GameObject {
+  id: symbol;
+}
+
+const GameObjectContext = createContext<GameObject | null>(null);
 
 export default GameObjectContext;

@@ -21,7 +21,6 @@ const Player: FC<PlayerProps> = ({ position }) => {
       size={{ width: 36, height: 64 }}
       layer={Layer.Character}
       velocity={{ x: 0, y: 0 }}
-      grounded={false}
     >
       <AnimationController />
       <MovementController />

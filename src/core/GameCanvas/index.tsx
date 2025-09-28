@@ -1,11 +1,23 @@
-import { type FC, useCallback, useLayoutEffect, useMemo, useRef } from 'react';
+import {
+  type FC,
+  type ReactNode,
+  useCallback,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+} from 'react';
 import type Entity from '../types/Entity.ts';
 import { GameCanvasContext } from './GameCanvasContext.ts';
-import type GameCanvasProps from './GameCanvasProps.ts';
+import type EntityMetadata from '../types/EntityMetadata.ts';
+
+type GameCanvasProps = {
+  children?: ReactNode;
+};
 
 const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const entitiesRef = useRef<Entity[]>([]);
+  const entityMetadataRef = useRef<Map<symbol, EntityMetadata>>(new Map());
 
   const tickCallbackRef = useRef<((dt: number) => void)[]>([]);
 
@@ -39,58 +51,85 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
     };
   }, []);
 
+  const setMetadata = useCallback(
+    (id: symbol, data: Partial<EntityMetadata>) => {
+      const meta = entityMetadataRef.current.get(id) ?? {};
+      entityMetadataRef.current.set(id, { ...meta, ...data });
+    },
+    [],
+  );
+
+  const getMetadata = useCallback((id: symbol): EntityMetadata => {
+    return entityMetadataRef.current.get(id) ?? {};
+  }, []);
+
   useLayoutEffect(() => {
     const ctx = canvasRef.current?.getContext('2d');
     if (!ctx) return;
 
     let last = performance.now();
+    const targetFPS = 180;
+    const frameDuration = 1000 / targetFPS;
+
+    let accumulator = 0;
 
     const loop = (time: number) => {
-      let dt = (time - last) / 1000;
-      if (dt > 0.05) dt = 0.05;
+      const delta = time - last;
       last = time;
+      accumulator += delta;
 
-      tickCallbackRef.current.forEach((cb) => cb(dt));
+      if (accumulator >= frameDuration) {
+        let dt = accumulator / 1000;
+        if (dt > 0.05) dt = 0.05;
 
-      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-      entitiesRef.current.forEach((e) => {
-        if (e.sprite?.image) {
-          const {
-            image,
-            frame,
-            frameSize,
-            currentAnimation,
-            animations,
-            direction,
-          } = e.sprite;
-          const anim = animations[currentAnimation];
+        accumulator = 0;
 
-          const dx = e.position.x;
-          const dy = e.position.y;
-          const dw = e.size.width;
-          const dh = e.size.height;
+        tickCallbackRef.current.forEach((cb) => cb(dt));
 
-          const sx = frame * frameSize.width;
-          const sy = anim.row * frameSize.height;
-          const sw = frameSize.width;
-          const sh = frameSize.height;
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        entitiesRef.current.forEach((e) => {
+          if (e.sprite?.image) {
+            const {
+              image,
+              frame,
+              frameSize,
+              currentAnimation,
+              animations,
+              direction,
+            } = e.sprite;
+            const anim = animations[currentAnimation];
 
-          ctx.save();
+            const dx = e.position.x;
+            const dy = e.position.y;
+            const dw = e.size.width;
+            const dh = e.size.height;
 
-          if (direction === 'left') {
-            ctx.scale(-1, 1);
-            ctx.drawImage(image, sx, sy, sw, sh, -(dx + dw), dy, dw, dh);
+            const sx = frame * frameSize.width;
+            const sy = anim.row * frameSize.height;
+            const sw = frameSize.width;
+            const sh = frameSize.height;
+
+            ctx.save();
+
+            if (direction === 'left') {
+              ctx.scale(-1, 1);
+              ctx.drawImage(image, sx, sy, sw, sh, -(dx + dw), dy, dw, dh);
+            } else {
+              ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
+            }
+
+            ctx.restore();
           } else {
-            ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
+            ctx.fillStyle = '#000';
+            ctx.fillRect(
+              e.position.x,
+              e.position.y,
+              e.size.width,
+              e.size.height,
+            );
           }
-
-          ctx.restore();
-        } else {
-          ctx.fillStyle = '#000';
-          ctx.fillRect(e.position.x, e.position.y, e.size.width, e.size.height);
-        }
-      });
-
+        });
+      }
       requestAnimationFrame(loop);
     };
 
@@ -102,9 +141,11 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
       registerEntity,
       unregisterEntity,
       updateEntity,
-      entities: entitiesRef.current,
+      getAllEntities: () => entitiesRef.current,
       getEntityById,
       registerTick,
+      setMetadata,
+      getMetadata,
     }),
     [
       registerEntity,
@@ -112,6 +153,8 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
       updateEntity,
       getEntityById,
       registerTick,
+      setMetadata,
+      getMetadata,
     ],
   );
 

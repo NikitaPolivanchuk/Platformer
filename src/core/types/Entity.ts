@@ -11,5 +11,4 @@ export default interface Entity {
   velocity?: Vector;
   layer: Layer;
   sprite?: Sprite;
-  grounded?: boolean;
 }
