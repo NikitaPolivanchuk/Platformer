@@ -114,6 +114,9 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
             if (direction === 'left') {
               ctx.scale(-1, 1);
               ctx.drawImage(image, sx, sy, sw, sh, -(dx + dw), dy, dw, dh);
+            } else if (direction === 'up') {
+              ctx.scale(1, -1);
+              ctx.drawImage(image, sx, sy, sw, sh, dx, -(dy + dh), dw, dh);
             } else {
               ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
             }
@@ -162,9 +165,9 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
     <>
       <canvas
         ref={canvasRef}
-        width={800}
-        height={600}
-        style={{ border: '1px solid black' }}
+        width={1600}
+        height={1000}
+        style={{ border: '1px solid black', backgroundColor: '#1a1818' }}
       />
       <GameCanvasContext.Provider value={contextValue}>
         {children}

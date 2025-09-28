@@ -16,7 +16,7 @@ const Coin: FC<CoinProps> = ({ position }) => {
   const id = useMemo(() => Symbol('Coin'), []);
 
   const [collected, setCollected] = useState(false);
-  const { score, setScore } = useGameState();
+  const { setScore } = useGameState();
   const { unregisterEntity } = useGameCanvas();
 
   if (collected) {
@@ -33,7 +33,7 @@ const Coin: FC<CoinProps> = ({ position }) => {
       <TriggerCollider
         onTrigger={() => {
           setCollected(true);
-          setScore(score + 100);
+          setScore((prev) => prev + 100);
           unregisterEntity(id);
         }}
         collidesWith={Layer.Character}

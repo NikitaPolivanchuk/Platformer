@@ -3,6 +3,7 @@ import type Size from '../types/Size.ts';
 import useGameObject from '../GameObject/useGameObject.ts';
 import useGameCanvas from '../GameCanvas/useGameCanvas.ts';
 import type { SpriteAnimation, SpriteDirection } from '../types/Sprite.ts';
+import { loadImage } from '../ImageRegistry.ts';
 
 type AnimatedSpriteProps = {
   src: string;
@@ -23,10 +24,12 @@ const AnimatedSprite: FC<AnimatedSpriteProps> = ({
   const { updateEntity, getEntityById, registerTick } = useGameCanvas();
 
   useLayoutEffect(() => {
-    const image = new Image();
-    image.src = src;
+    let isMounted = true;
+    void loadImage(src).then((image) => {
+      if (!isMounted) {
+        return;
+      }
 
-    image.onload = () => {
       updateEntity(id, {
         sprite: {
           image,
@@ -37,6 +40,9 @@ const AnimatedSprite: FC<AnimatedSpriteProps> = ({
           direction,
         },
       });
+    });
+    return () => {
+      isMounted = false;
     };
   }, [
     animations,

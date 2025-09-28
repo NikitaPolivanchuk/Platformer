@@ -1,6 +1,6 @@
 import type Size from './Size.ts';
 
-export type SpriteDirection = 'left' | 'right';
+export type SpriteDirection = 'left' | 'right' | 'up' | 'down';
 
 export interface SpriteAnimation {
   frameCount: number;

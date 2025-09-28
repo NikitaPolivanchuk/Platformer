@@ -6,5 +6,8 @@ export default interface EntityMetadata {
     direction?: 'up' | 'down' | 'left' | 'right';
     dropThrough?: boolean;
   };
+
   dropThroughTimer?: number;
+
+  lastHitTime?: number;
 }
