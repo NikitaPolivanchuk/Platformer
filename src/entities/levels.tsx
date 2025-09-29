@@ -4,6 +4,10 @@ import Coin from './Coin';
 import Platform from './Platform';
 import HorizontalSpike from './HorizontalSpike';
 import Skull from './Skull';
+import Sign from './Sign';
+import Gib from './Gib';
+import StickedGib from './StickedGib';
+import VerticalSpike from './VerticalSpike';
 
 export const levels = {
   1: (
@@ -30,7 +34,17 @@ export const levels = {
       <HorizontalSpike position={{ x: 400, y: 200 }} type={0} />
       <HorizontalSpike position={{ x: 460, y: 200 }} type={1} />
 
+      <VerticalSpike position={{ x: 540, y: 200 }} type={0} />
+      <VerticalSpike position={{ x: 540, y: 260 }} type={1} />
+
       <Skull position={{ x: 600, y: 200 }} />
+
+      <Sign position={{ x: 600, y: 300 }} type={0} />
+
+      <Gib position={{ x: 700, y: 300 }} type={0} />
+
+      <StickedGib position={{ x: 700, y: 450 }} type={0} />
+      <StickedGib position={{ x: 750, y: 450 }} type={1} />
     </>
   ),
   2: (

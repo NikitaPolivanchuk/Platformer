@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { type FC, useRef } from 'react';
 import GameObject from '../../core/GameObject';
 import { Layer } from '../../core/types/Layer.ts';
 import type Point from '../../core/types/Point.ts';
@@ -12,7 +12,15 @@ type SkullProps = {
 };
 
 const Skull: FC<SkullProps> = ({ position }) => {
+  const collectedRef = useRef(false);
   const { setLevel } = useGameState();
+
+  const handleTrigger = () => {
+    if (!collectedRef.current) {
+      setLevel((prev) => prev + 1);
+      collectedRef.current = true;
+    }
+  };
 
   return (
     <GameObject
@@ -33,7 +41,7 @@ const Skull: FC<SkullProps> = ({ position }) => {
         }}
       />
       <TriggerCollider
-        onTrigger={() => setLevel((prev) => prev + 1)}
+        onTrigger={handleTrigger}
         collidesWith={Layer.Character}
       />
     </GameObject>
