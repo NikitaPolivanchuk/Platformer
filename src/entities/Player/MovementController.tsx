@@ -30,7 +30,7 @@ const MovementController = () => {
 
       let newVelY = entity.velocity.y;
       if (grounded && upKey && !downKey) {
-        newVelY = -150;
+        newVelY = -160;
       }
 
       if (grounded && downKey) {

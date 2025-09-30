@@ -165,9 +165,12 @@ const GameCanvas: FC<GameCanvasProps> = ({ children }) => {
     <>
       <canvas
         ref={canvasRef}
-        width={1600}
-        height={1000}
-        style={{ border: '1px solid black', backgroundColor: '#1a1818' }}
+        width={1216}
+        height={768}
+        style={{
+          border: '1px solid black',
+          backgroundColor: '#1a1818',
+        }}
       />
       <GameCanvasContext.Provider value={contextValue}>
         {children}

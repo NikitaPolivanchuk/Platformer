@@ -1,20 +1,19 @@
+import type { FC } from 'react';
+import type Size from '../../core/types/Size.ts';
+import type Point from '../../core/types/Point.ts';
 import GameObject from '../../core/GameObject';
-import type Vector from '../../core/types/Vector.ts';
-import { type FC } from 'react';
 import { Layer } from '../../core/types/Layer.ts';
-import Sprite from '../../core/Sprite';
-import useGameState from '../../core/GameState/useGameState.ts';
+import TriggerCollider from '../../core/TriggerCollider';
 import useGameCanvas from '../../core/GameCanvas/useGameCanvas.ts';
 import type Entity from '../../core/types/Entity.ts';
-import TriggerCollider from '../../core/TriggerCollider';
-import spikeSheet from '@assets/horizontal-spike.png';
+import useGameState from '../../core/GameState/useGameState.ts';
 
-type HorizontalSpikeProps = {
-  position: Vector;
-  type: number;
+type VoidProps = {
+  position: Point;
+  size: Size;
 };
 
-const HorizontalSpike: FC<HorizontalSpikeProps> = ({ position, type }) => {
+const Void: FC<VoidProps> = ({ position, size }) => {
   const { setLives } = useGameState();
   const { updateEntity, getMetadata } = useGameCanvas();
 
@@ -31,18 +30,13 @@ const HorizontalSpike: FC<HorizontalSpikeProps> = ({ position, type }) => {
   };
 
   return (
-    <GameObject
-      position={position}
-      size={{ width: 64, height: 36 }}
-      layer={Layer.Environment}
-    >
+    <GameObject position={position} size={size} layer={Layer.Background}>
       <TriggerCollider
         onTrigger={handleTrigger}
         collidesWith={Layer.Character}
       />
-      <Sprite src={spikeSheet} type={type} size={{ width: 64, height: 36 }} />
     </GameObject>
   );
 };
 
-export default HorizontalSpike;
+export default Void;

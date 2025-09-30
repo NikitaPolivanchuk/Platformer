@@ -1,4 +1,4 @@
-import { type FC, useMemo } from 'react';
+import { type FC } from 'react';
 import type Point from '../../core/types/Point.ts';
 import GameObject from '../../core/GameObject';
 import { Layer } from '../../core/types/Layer.ts';
@@ -15,27 +15,25 @@ type VerticalSpikeProps = {
 };
 
 const VerticalSpike: FC<VerticalSpikeProps> = ({ position, type }) => {
-  const id = useMemo(() => Symbol('VerticalSpike'), []);
   const { setLives } = useGameState();
-  const { getMetadata, setMetadata } = useGameCanvas();
+  const { updateEntity, getMetadata } = useGameCanvas();
 
   const handleTrigger = (entity: Entity) => {
-    const now = Date.now();
-
-    const metadata = getMetadata(entity.id);
-    const lastHitTime = metadata.lastHitTime ?? 0;
-
-    if (now - lastHitTime >= 1000) {
-      setLives((prev) => prev - 1);
-      setMetadata(entity.id, { lastHitTime: now });
+    const meta = getMetadata(entity.id);
+    if (!meta.startPosition) {
+      return;
     }
+
+    setLives((prev) => prev - 1);
+    updateEntity(entity.id, {
+      position: meta.startPosition,
+    });
   };
 
   return (
     <GameObject
-      id={id}
       position={position}
-      size={{ width: 36, height: 56 }}
+      size={{ width: 36, height: 64 }}
       layer={Layer.Environment}
     >
       <TriggerCollider
@@ -44,7 +42,7 @@ const VerticalSpike: FC<VerticalSpikeProps> = ({ position, type }) => {
       />
       <Sprite
         src={verticalSpike}
-        size={{ width: 36, height: 56 }}
+        size={{ width: 36, height: 64 }}
         type={type}
       />
     </GameObject>

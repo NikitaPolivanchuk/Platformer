@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { type FC, useMemo } from 'react';
 import GameObject from '../../core/GameObject';
 import MovementController from './MovementController.tsx';
 import Movable from '../../core/Movable';
@@ -9,14 +9,23 @@ import { Layer } from '../../core/types/Layer.ts';
 import AnimatedSprite from '../../core/AnimatedSprite';
 import playerSheet from '@assets/player.png';
 import AnimationController from './AnimationController.tsx';
+import useGameCanvas from '../../core/GameCanvas/useGameCanvas.ts';
 
 type PlayerProps = {
   position: Point;
 };
 
 const Player: FC<PlayerProps> = ({ position }) => {
+  const id = useMemo(() => Symbol('Player'), []);
+  const { setMetadata } = useGameCanvas();
+
+  setMetadata(id, {
+    startPosition: position,
+  });
+
   return (
     <GameObject
+      id={id}
       position={position}
       size={{ width: 36, height: 64 }}
       layer={Layer.Character}

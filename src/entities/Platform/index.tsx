@@ -26,12 +26,12 @@ const Platform: FC<PlatformProps> = ({ position, type }) => {
     <GameObject
       id={id}
       position={position}
-      size={{ width: 48, height: 48 }}
+      size={{ width: 64, height: 48 }}
       layer={Layer.Wall}
     >
       <Sprite
         src={platformSheet}
-        size={{ width: 48, height: 48 }}
+        size={{ width: 64, height: 48 }}
         type={type}
       />
     </GameObject>

@@ -4,7 +4,7 @@ import GamePage from './pages/GamePage.tsx';
 import ResultPage from './pages/ResultPage.tsx';
 
 function App() {
-  const [page, setPage] = useState<'start' | 'game' | 'result'>('start');
+  const [page, setPage] = useState<'start' | 'game' | 'result'>('game');
 
   return (
     <>

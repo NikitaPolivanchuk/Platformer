@@ -1,3 +1,5 @@
+import type Point from './Point.ts';
+
 export default interface EntityMetadata {
   grounded?: boolean;
 
@@ -10,4 +12,6 @@ export default interface EntityMetadata {
   dropThroughTimer?: number;
 
   lastHitTime?: number;
+
+  startPosition?: Point;
 }
