@@ -7,6 +7,8 @@ import { MAX_FPS } from './constants.ts';
 import controlSystem from './systems/controlSystem.ts';
 import cameraSystem from './systems/cameraSystem.ts';
 import renderSystem from './systems/renderSystem.ts';
+import pathSystem from './systems/pathSystem.ts';
+import movementSystem from './systems/movementSystem.ts';
 
 type Props = {
   children?: ReactNode;
@@ -39,8 +41,10 @@ const World: FC<Props> = ({ children }) => {
         }
         accumulator = 0;
 
-        controlSystem(ecs, dt);
+        controlSystem(ecs);
+        pathSystem(ecs);
         physicsSystem(ecs, dt);
+        movementSystem(ecs, dt);
         collisionSystem(ecs);
         cameraSystem(ecs, ctx);
         renderSystem(ecs, ctx, dt);
@@ -53,12 +57,7 @@ const World: FC<Props> = ({ children }) => {
 
   return (
     <EcsContext.Provider value={ecsRef.current}>
-      <canvas
-        ref={canvasRef}
-        width={1000}
-        height={800}
-        style={{ border: '1px solid' }}
-      />
+      <canvas ref={canvasRef} width={1000} height={800} style={{ border: '1px solid' }} />
       {children}
     </EcsContext.Provider>
   );

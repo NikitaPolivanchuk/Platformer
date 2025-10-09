@@ -11,7 +11,8 @@ const PlayerControl: FC = () => {
 
   const left = useKeyPress(['ArrowLeft', 'a']);
   const right = useKeyPress(['ArrowRight', 'd']);
-  const up = useKeyPress(['ArrowUp', 'w', ' ']);
+  const jump = useKeyPress(['ArrowUp', 'w', ' ']);
+  const drop = useKeyPress(['ArrowDown', 's']);
 
   useLayoutEffect(() => {
     const direction: Vector = {
@@ -19,9 +20,13 @@ const PlayerControl: FC = () => {
       y: 0,
     };
 
-    ecs.addComponent<ControlComponent>(id, 'control', { direction, jump: up });
+    ecs.addComponent<ControlComponent>(id, 'control', {
+      direction,
+      jump,
+      drop,
+    });
     return () => ecs.removeComponent(id, 'control');
-  }, [ecs, id, left, right, up]);
+  }, [drop, ecs, id, jump, left, right]);
 
   return null;
 };

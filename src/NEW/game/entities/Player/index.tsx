@@ -35,7 +35,7 @@ const Player: FC<PlayerProps> = ({ position }) => {
         }}
       />
       <Collider size={{ width: 32, height: 64 }} />
-      <RigidBody />
+      <RigidBody gravity={100} maxFallSpeed={200} type={'dynamic'} />
     </Entity>
   );
 };

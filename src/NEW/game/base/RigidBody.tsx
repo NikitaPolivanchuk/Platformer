@@ -1,29 +1,28 @@
 import { type FC, useLayoutEffect } from 'react';
-import type { Vector } from '../types.ts';
 import useEntity from './Entity/useEntity.ts';
 import useEcs from '../ecs/useEcs.ts';
 import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
 
 interface RigidBodyProps {
-  velocity?: Vector;
-  grounded?: boolean;
+  type: 'dynamic' | 'kinematic';
+  gravity?: number;
+  maxFallSpeed?: number;
 }
 
-const RigidBody: FC<RigidBodyProps> = ({
-  velocity = { x: 0, y: 0 },
-  grounded = false,
-}) => {
+const RigidBody: FC<RigidBodyProps> = ({ type, gravity = 0, maxFallSpeed = 0 }) => {
   const id = useEntity();
   const ecs = useEcs();
 
   useLayoutEffect(() => {
     ecs.addComponent<RigidBodyComponent>(id, 'rigidbody', {
-      velocity,
-      grounded,
+      type,
+      gravityForce: gravity,
+      maxFallSpeed,
+      groundedOn: null,
     });
 
     return () => ecs.removeComponent(id, 'rigidbody');
-  }, [ecs, grounded, id, velocity]);
+  }, [ecs, gravity, id, maxFallSpeed, type]);
 
   return null;
 };

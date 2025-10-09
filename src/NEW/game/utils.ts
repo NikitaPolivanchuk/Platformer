@@ -1,12 +1,10 @@
-export function aabbIntersect(
-  ax: number,
-  ay: number,
-  aw: number,
-  ah: number,
-  bx: number,
-  by: number,
-  bw: number,
-  bh: number,
-) {
-  return ax < bx + bw && ax + aw > bx && ay < by + bh && ay + ah > by;
+import type { Size, Vector } from './types.ts';
+
+export function intersects(aPos: Vector, aSize: Size, bPos: Vector, bSize: Size) {
+  return (
+    aPos.x < bPos.x + bSize.width &&
+    aPos.x + aSize.width > bPos.x &&
+    aPos.y < bPos.y + bSize.height &&
+    aPos.y + aSize.height > bPos.y
+  );
 }

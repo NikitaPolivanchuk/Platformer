@@ -18,7 +18,10 @@ const Entity: FC<EntityProps> = ({
   const ecs = useEcs();
 
   useLayoutEffect(() => {
-    ecs.addComponent<TransformComponent>(id, 'transform', { position });
+    ecs.addComponent<TransformComponent>(id, 'transform', {
+      position,
+      velocity: { x: 0, y: 0 },
+    });
     return () => ecs.removeComponent(id, 'transform');
   }, [ecs, id, position]);
 

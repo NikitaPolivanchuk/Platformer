@@ -1,61 +1,94 @@
 import type Ecs from '../ecs';
 import type TransformComponent from '../components/TransformComponent.ts';
-import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
 import type ColliderComponent from '../components/ColliderComponent.ts';
-import { aabbIntersect } from '../utils.ts';
+import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
+import { intersects } from '../utils.ts';
+import type ControlComponent from '../components/ControlComponent.ts';
 
-const collisionSystem = (ecs: Ecs) => {
-  const moving = ecs.entitiesWith('transform', 'rigidbody', 'collider');
-  const blocks = ecs.entitiesWith('transform', 'collider');
+export const collisionSystem = (ecs: Ecs) => {
+  const entities = ecs.entitiesWith('transform', 'collider');
 
-  for (const e of moving) {
-    const transform = ecs.getComponent<TransformComponent>(e, 'transform')!;
-    const rigid = ecs.getComponent<RigidBodyComponent>(e, 'rigidbody')!;
-    const col = ecs.getComponent<ColliderComponent>(e, 'collider')!;
-    rigid.grounded = false;
+  for (const e of entities) {
+    const eTransform = ecs.getComponent<TransformComponent>(e, 'transform')!;
+    const eCollider = ecs.getComponent<ColliderComponent>(e, 'collider')!;
+    const eRigid = ecs.getComponent<RigidBodyComponent>(e, 'rigidbody');
+    const eControl = ecs.getComponent<ControlComponent>(e, 'control');
 
-    let ax = transform.position.x;
-    let ay = transform.position.y;
-    const aw = col.size.width;
-    const ah = col.size.height;
+    if (eRigid) {
+      eRigid.groundedOn = null;
+    }
 
-    for (const block of blocks) {
-      if (block === e) continue;
-
-      const bt = ecs.getComponent<TransformComponent>(block, 'transform')!;
-      const bc = ecs.getComponent<ColliderComponent>(block, 'collider')!;
-
-      const bx = bt.position.x;
-      const by = bt.position.y;
-      const bw = bc.size.width;
-      const bh = bc.size.height;
-
-      if (!aabbIntersect(ax, ay, aw, ah, bx, by, bw, bh)) {
+    for (const o of entities) {
+      if (e === o) {
         continue;
       }
 
-      const overlapX = Math.min(ax + aw, bx + bw) - Math.max(ax, bx);
-      const overlapY = Math.min(ay + ah, by + bh) - Math.max(ay, by);
+      const oTransform = ecs.getComponent<TransformComponent>(o, 'transform')!;
+      const oCollider = ecs.getComponent<ColliderComponent>(o, 'collider')!;
+      const oRigid = ecs.getComponent<RigidBodyComponent>(o, 'rigidbody');
+      const oControl = ecs.getComponent<ControlComponent>(o, 'control');
 
-      if (Math.abs(overlapX) < Math.abs(overlapY)) {
-        if (ax + aw / 2 < bx + bw / 2) {
-          transform.position.x -= overlapX;
-        } else {
-          transform.position.x += overlapX;
-        }
-        rigid.velocity.x = 0;
-      } else {
-        if (ay + ah / 2 < by + bh / 2) {
-          transform.position.y -= overlapY;
-          rigid.grounded = true;
-        } else {
-          transform.position.y += overlapY;
-        }
-        rigid.velocity.y = 0;
+      if (!intersects(eTransform.position, eCollider.size, oTransform.position, oCollider.size)) {
+        continue;
       }
 
-      ax = transform.position.x;
-      ay = transform.position.y;
+      const eCanMove = eRigid ? eRigid.type === 'dynamic' : false;
+      const oCanMove = oRigid ? oRigid.type === 'dynamic' : false;
+
+      const overlapX =
+        eTransform.position.x < oTransform.position.x
+          ? eTransform.position.x + eCollider.size.width - oTransform.position.x
+          : oTransform.position.x + oCollider.size.width - eTransform.position.x;
+
+      const overlapY =
+        eTransform.position.y < oTransform.position.y
+          ? eTransform.position.y + eCollider.size.height - oTransform.position.y
+          : oTransform.position.y + oCollider.size.height - eTransform.position.y;
+
+      const platform = eCollider.oneWay ? e : oCollider.oneWay ? o : null;
+      if (platform) {
+        const isEPlatform = platform === e;
+
+        const platformTransform = isEPlatform ? eTransform : oTransform;
+        const actorTransform = isEPlatform ? oTransform : eTransform;
+        const actorCollider = isEPlatform ? oCollider : eCollider;
+        const actorControl = isEPlatform ? oControl : eControl;
+
+        const platformTop = platformTransform.position.y;
+        const actorBottom = actorTransform.position.y + actorCollider.size.height;
+
+        const isAbove = actorBottom - actorTransform.velocity.y <= platformTop;
+        const isFalling = actorTransform.velocity.y > 0;
+        const isDropping = actorControl?.drop;
+
+        if (!isAbove || !isFalling || isDropping) {
+          continue;
+        }
+      }
+
+      if (Math.abs(overlapX) < Math.abs(overlapY)) {
+        if (eCanMove) {
+          eTransform.position.x -= overlapX;
+          eTransform.velocity.x = 0;
+        } else if (oCanMove) {
+          oTransform.position.x += overlapX;
+          oTransform.velocity.x = 0;
+        }
+      } else {
+        if (eCanMove) {
+          eTransform.position.y -= overlapY;
+          eTransform.velocity.y = 0;
+          if (eRigid && overlapY > 0) {
+            eRigid.groundedOn = o;
+          }
+        } else if (oCanMove) {
+          oTransform.position.y += overlapY;
+          oTransform.velocity.y = 0;
+          if (oRigid && overlapY < 0) {
+            oRigid.groundedOn = e;
+          }
+        }
+      }
     }
   }
 };

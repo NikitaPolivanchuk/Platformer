@@ -6,7 +6,8 @@ type Component =
   | 'animatedSprite'
   | 'control'
   | 'animationController'
-  | 'camera';
+  | 'camera'
+  | 'pathMovement';
 
 export default class Ecs {
   private components: Map<Component, Map<symbol, object>> = new Map();

@@ -6,17 +6,18 @@ import type ColliderComponent from '../components/ColliderComponent.ts';
 
 interface ColliderProps {
   size: Size;
+  oneWay?: boolean;
 }
 
-const Collider: FC<ColliderProps> = ({ size }) => {
+const Collider: FC<ColliderProps> = ({ size, oneWay = false }) => {
   const id = useEntity();
   const ecs = useEcs();
 
   useLayoutEffect(() => {
-    ecs.addComponent<ColliderComponent>(id, 'collider', { size });
+    ecs.addComponent<ColliderComponent>(id, 'collider', { size, oneWay });
 
     return () => ecs.removeComponent(id, 'collider');
-  }, [ecs, id, size]);
+  }, [ecs, id, oneWay, size]);
 
   return null;
 };

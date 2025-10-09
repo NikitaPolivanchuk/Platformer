@@ -4,7 +4,6 @@ import type TransformComponent from '../components/TransformComponent.ts';
 import type SpriteComponent from '../components/SpriteComponent.ts';
 import type AnimatedSpriteComponent from '../components/AnimatedSpriteComponent.ts';
 import type { AnimationControllerComponent } from '../components/AnimationControllerComponent.ts';
-import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
 
 const renderSystem = (ecs: Ecs, ctx: CanvasRenderingContext2D, dt: number) => {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -36,15 +35,9 @@ const renderSystem = (ecs: Ecs, ctx: CanvasRenderingContext2D, dt: number) => {
 
   for (const id of ecs.entitiesWith('transform', 'animatedSprite')) {
     const t = ecs.getComponent<TransformComponent>(id, 'transform')!;
-    const sprite = ecs.getComponent<AnimatedSpriteComponent>(
-      id,
-      'animatedSprite',
-    )!;
+    const sprite = ecs.getComponent<AnimatedSpriteComponent>(id, 'animatedSprite')!;
 
-    const controller = ecs.getComponent<AnimationControllerComponent>(
-      id,
-      'animationController',
-    );
+    const controller = ecs.getComponent<AnimationControllerComponent>(id, 'animationController');
     if (controller) {
       const desiredAnim = controller.getAnimation(ecs, id);
       if (desiredAnim !== sprite.currentAnimation) {
@@ -54,13 +47,10 @@ const renderSystem = (ecs: Ecs, ctx: CanvasRenderingContext2D, dt: number) => {
       }
     }
 
-    const rigid = ecs.getComponent<RigidBodyComponent>(id, 'rigidbody');
-    if (rigid) {
-      if (rigid.velocity.x < -0.01) {
-        sprite.flipX = true;
-      } else if (rigid.velocity.x > 0.01) {
-        sprite.flipX = false;
-      }
+    if (t.velocity.x < -0.01) {
+      sprite.flipX = true;
+    } else if (t.velocity.x > 0.01) {
+      sprite.flipX = false;
     }
 
     const anim = sprite.animations[sprite.currentAnimation];
@@ -89,10 +79,7 @@ const renderSystem = (ecs: Ecs, ctx: CanvasRenderingContext2D, dt: number) => {
     if (sprite.flipX) {
       ctx.translate(t.position.x - cam.position.x + sprite.size.width / 2, 0);
       ctx.scale(-1, 1);
-      ctx.translate(
-        -(t.position.x - cam.position.x + sprite.size.width / 2),
-        0,
-      );
+      ctx.translate(-(t.position.x - cam.position.x + sprite.size.width / 2), 0);
     }
 
     ctx.drawImage(

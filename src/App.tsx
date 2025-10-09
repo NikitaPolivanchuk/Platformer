@@ -9,6 +9,8 @@ import Collider from './NEW/game/base/Collider.tsx';
 import Player from './NEW/game/entities/Player';
 import Camera from './NEW/game/base/Camera.tsx';
 import block from '@assets/wall.png';
+import Path from './NEW/game/base/Path.tsx';
+import RigidBody from './NEW/game/base/RigidBody.tsx';
 
 function App() {
   // const [page, setPage] = useState<'start' | 'game' | 'result'>('game');
@@ -29,6 +31,19 @@ function App() {
 
         <Entity position={{ x: 100, y: 500 }}>
           <Collider size={{ width: 4800, height: 48 }} />
+          <Sprite src={block} size={{ width: 48, height: 48 }} />
+        </Entity>
+
+        <Entity position={{ x: 300, y: 350 }}>
+          <Path
+            points={[
+              { x: 300, y: 350 },
+              { x: 400, y: 350 },
+            ]}
+            speed={50}
+          />
+          <Collider size={{ width: 480, height: 48 }} oneWay />
+          <RigidBody type={'kinematic'} />
           <Sprite src={block} size={{ width: 48, height: 48 }} />
         </Entity>
       </World>

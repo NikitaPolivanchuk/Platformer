@@ -1,6 +1,6 @@
-import type { Vector } from '../types.ts';
-
 export default interface RigidBodyComponent {
-  velocity: Vector;
-  grounded: boolean;
+  type: 'dynamic' | 'kinematic';
+  groundedOn: symbol | null;
+  gravityForce: number;
+  maxFallSpeed: number;
 }
