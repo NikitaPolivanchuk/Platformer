@@ -7,7 +7,7 @@ const movementSystem = (ecs: Ecs, dt: number) => {
     const transform = ecs.getComponent<TransformComponent>(e, 'transform')!;
     const rigid = ecs.getComponent<RigidBodyComponent>(e, 'rigidbody');
 
-    if (rigid && rigid.groundedOn) {
+    if (rigid?.groundedOn) {
       const oTransform = ecs.getComponent<TransformComponent>(rigid.groundedOn, 'transform');
       if (oTransform) {
         transform.position.x += oTransform.velocity.x * dt;

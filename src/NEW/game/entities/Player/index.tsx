@@ -20,7 +20,7 @@ const Player: FC<PlayerProps> = ({ position }) => {
       <AnimatedSprite
         src={playerSheet}
         size={{ width: 36, height: 64 }}
-        currentAnimation={'walk'}
+        currentAnimation={'idle'}
         animations={{
           idle: {
             frameCount: 1,
@@ -34,7 +34,7 @@ const Player: FC<PlayerProps> = ({ position }) => {
           },
         }}
       />
-      <Collider size={{ width: 32, height: 64 }} />
+      <Collider size={{ width: 36, height: 64 }} />
       <RigidBody gravity={100} maxFallSpeed={200} type={'dynamic'} />
     </Entity>
   );

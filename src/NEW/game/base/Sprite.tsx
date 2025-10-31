@@ -20,7 +20,7 @@ const Sprite: FC<SpriteProps> = ({ src, size, type = 0 }) => {
 
     const img = getCachedImage(src);
 
-    const applySprite = (image: HTMLImageElement) => {
+    const apply = (image: HTMLImageElement) => {
       if (!mounted) {
         return;
       }
@@ -33,9 +33,9 @@ const Sprite: FC<SpriteProps> = ({ src, size, type = 0 }) => {
     };
 
     if (!img) {
-      void loadImage(src).then(applySprite);
+      void loadImage(src).then(apply);
     } else {
-      applySprite(img);
+      apply(img);
     }
 
     return () => {

@@ -7,7 +7,8 @@ type Component =
   | 'control'
   | 'animationController'
   | 'camera'
-  | 'pathMovement';
+  | 'pathMovement'
+  | 'background';
 
 export default class Ecs {
   private components: Map<Component, Map<symbol, object>> = new Map();
@@ -27,14 +28,20 @@ export default class Ecs {
     this.components.get(name)?.delete(id);
   }
 
-  entitiesWith(...componentNames: Component[]): symbol[] {
+  entitiesWith(...componentNames: Component[]) {
     const [first, ...rest] = componentNames;
     const firstMap = this.components.get(first);
     if (!firstMap) {
       return [];
     }
-    return [...firstMap.keys()].filter((e) =>
-      rest.every((c) => this.components.get(c)?.has(e)),
-    );
+    return [...firstMap.keys()].filter((e) => rest.every((c) => this.components.get(c)?.has(e)));
+  }
+
+  componentsOfType<T extends object>(name: Component) {
+    const map = this.components.get(name);
+    if (!map) {
+      return [];
+    }
+    return [...map.entries()] as [symbol, T][];
   }
 }

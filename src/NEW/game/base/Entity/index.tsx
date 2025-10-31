@@ -10,11 +10,7 @@ type EntityProps = {
   children?: ReactNode;
 };
 
-const Entity: FC<EntityProps> = ({
-  id = Symbol('entity'),
-  position,
-  children,
-}) => {
+const Entity: FC<EntityProps> = ({ id = Symbol('entity'), position, children }) => {
   const ecs = useEcs();
 
   useLayoutEffect(() => {
