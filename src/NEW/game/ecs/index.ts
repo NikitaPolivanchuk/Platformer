@@ -8,7 +8,8 @@ type Component =
   | 'animationController'
   | 'camera'
   | 'pathMovement'
-  | 'background';
+  | 'background'
+  | 'playerState';
 
 export default class Ecs {
   private components: Map<Component, Map<symbol, object>> = new Map();

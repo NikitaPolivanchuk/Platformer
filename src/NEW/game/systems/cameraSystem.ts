@@ -21,8 +21,8 @@ const cameraSystem = (ecs: Ecs, ctx: CanvasRenderingContext2D) => {
       y: targetTransform.position.y - ctx.canvas.height / (2 * cam.zoom) + cam.offset.y,
     };
 
-    cam.position.x += (targetPos.x - cam.position.x) * (cam.lerp ?? 1);
-    cam.position.y += (targetPos.y - cam.position.y) * (cam.lerp ?? 1);
+    cam.position.x += (targetPos.x - cam.position.x) * cam.lerp;
+    cam.position.y += (targetPos.y - cam.position.y) * cam.lerp;
 
     if (cam.bounds) {
       cam.position.x = Math.max(cam.bounds.minX, Math.min(cam.position.x, cam.bounds.maxX));

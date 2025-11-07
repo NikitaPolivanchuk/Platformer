@@ -10,66 +10,40 @@ const prevTriggers = new Map<symbol, Set<symbol>>();
 export const collisionSystem = (ecs: Ecs) => {
   const entities = ecs.entitiesWith('transform', 'collider');
   const currentTriggers = new Map<symbol, Set<symbol>>();
+  const EPS = 0.0001;
+
+  const recordTrigger = (a: symbol, b: symbol) => {
+    if (!currentTriggers.has(a)) currentTriggers.set(a, new Set());
+    currentTriggers.get(a)!.add(b);
+  };
 
   for (const e of entities) {
     const eTransform = ecs.getComponent<TransformComponent>(e, 'transform')!;
     const eCollider = ecs.getComponent<ColliderComponent>(e, 'collider')!;
     const eRigid = ecs.getComponent<RigidBodyComponent>(e, 'rigidbody');
     const eControl = ecs.getComponent<ControlComponent>(e, 'control');
-
-    if (eRigid) {
-      eRigid.groundedOn = null;
-    }
+    if (!eRigid || eRigid.type !== 'dynamic') continue;
 
     for (const o of entities) {
-      if (e === o) {
-        continue;
-      }
+      if (e === o) continue;
 
       const oTransform = ecs.getComponent<TransformComponent>(o, 'transform')!;
       const oCollider = ecs.getComponent<ColliderComponent>(o, 'collider')!;
-      const oRigid = ecs.getComponent<RigidBodyComponent>(o, 'rigidbody');
+      // const oRigid = ecs.getComponent<RigidBodyComponent>(o, 'rigidbody');
       const oControl = ecs.getComponent<ControlComponent>(o, 'control');
 
-      const isOverlapping = intersects(
-        eTransform.position,
-        eCollider.size,
-        oTransform.position,
-        oCollider.size,
-      );
-
-      if (isOverlapping) {
-        if (eCollider.onTrigger || oCollider.onTrigger) {
-          if (!currentTriggers.has(e)) currentTriggers.set(e, new Set());
-          currentTriggers.get(e)!.add(o);
-
-          if (!currentTriggers.has(o)) currentTriggers.set(o, new Set());
-          currentTriggers.get(o)!.add(e);
+      const isTriggerPair = eCollider.onTrigger || oCollider.onTrigger;
+      if (isTriggerPair) {
+        if (intersects(eTransform.position, eCollider.size, oTransform.position, oCollider.size)) {
+          if (eCollider.onTrigger) recordTrigger(e, o);
+          if (oCollider.onTrigger) recordTrigger(o, e);
         }
+        continue;
       }
 
-      const eIsTrigger = !!eCollider.onTrigger;
-      const oIsTrigger = !!oCollider.onTrigger;
-      if (!isOverlapping || eIsTrigger || oIsTrigger) continue;
-
-      const eCanMove = eRigid?.type === 'dynamic';
-      const oCanMove = oRigid?.type === 'dynamic';
-
-      const leftOverlap = eTransform.position.x + eCollider.size.width - oTransform.position.x;
-      const rightOverlap = oTransform.position.x + oCollider.size.width - eTransform.position.x;
-      const topOverlap = eTransform.position.y + eCollider.size.height - oTransform.position.y;
-      const bottomOverlap = oTransform.position.y + oCollider.size.height - eTransform.position.y;
-
-      const overlaps = [
-        { side: 'left', value: leftOverlap },
-        { side: 'right', value: rightOverlap },
-        { side: 'top', value: topOverlap },
-        { side: 'bottom', value: bottomOverlap },
-      ];
-
-      const collision = overlaps.filter((o) => o.value > 0).sort((a, b) => a.value - b.value)[0];
-
-      if (!collision) continue;
+      if (!intersects(eTransform.position, eCollider.size, oTransform.position, oCollider.size)) {
+        continue;
+      }
 
       const platform = eCollider.oneWay ? e : oCollider.oneWay ? o : null;
       if (platform) {
@@ -81,7 +55,6 @@ export const collisionSystem = (ecs: Ecs) => {
 
         const platformTop = platformTransform.position.y;
         const actorBottom = actorTransform.position.y + actorCollider.size.height;
-
         const isAbove = actorBottom - actorTransform.velocity.y <= platformTop;
         const isFalling = actorTransform.velocity.y > 0;
         const isDropping = actorControl?.drop;
@@ -91,59 +64,96 @@ export const collisionSystem = (ecs: Ecs) => {
         }
       }
 
-      switch (collision.side) {
-        case 'left':
-          if (eCanMove) {
-            eTransform.position.x -= collision.value;
-            eTransform.velocity.x = 0;
-          } else if (oCanMove) {
-            oTransform.position.x += collision.value;
-            oTransform.velocity.x = 0;
-          }
-          break;
+      const eTop = eTransform.position.y;
+      const eBottom = eTop + eCollider.size.height;
+      const oTop = oTransform.position.y;
+      const oBottom = oTop + oCollider.size.height;
 
-        case 'right':
-          if (eCanMove) {
-            eTransform.position.x += collision.value;
-            eTransform.velocity.x = 0;
-          } else if (oCanMove) {
-            oTransform.position.x -= collision.value;
-            oTransform.velocity.x = 0;
-          }
-          break;
+      const verticalOverlap = Math.min(eBottom, oBottom) - Math.max(eTop, oTop);
+      if (verticalOverlap < eCollider.size.height * 0.1) continue;
 
-        case 'top':
-          if (eCanMove) {
-            eTransform.position.y -= collision.value;
-            eTransform.velocity.y = 0;
-            if (eRigid && collision.value > 0) {
-              eRigid.groundedOn = o;
-            }
-          } else if (oCanMove) {
-            oTransform.position.y += collision.value;
-            oTransform.velocity.y = 0;
-            if (oRigid && collision.value > 0) {
-              oRigid.groundedOn = e;
-            }
-          }
-          break;
+      const leftOverlap = eTransform.position.x + eCollider.size.width - oTransform.position.x;
+      const rightOverlap = oTransform.position.x + oCollider.size.width - eTransform.position.x;
 
-        case 'bottom':
-          if (eCanMove) {
-            eTransform.position.y += collision.value;
-            eTransform.velocity.y = 0;
-          } else if (oCanMove) {
-            oTransform.position.y -= collision.value;
-            oTransform.velocity.y = 0;
-          }
-          break;
+      if (leftOverlap > EPS && leftOverlap < rightOverlap) {
+        eTransform.position.x -= leftOverlap;
+        eTransform.velocity.x = 0;
+      } else if (rightOverlap > EPS && rightOverlap < leftOverlap) {
+        eTransform.position.x += rightOverlap;
+        eTransform.velocity.x = 0;
+      }
+    }
+  }
+
+  for (const e of entities) {
+    const eTransform = ecs.getComponent<TransformComponent>(e, 'transform')!;
+    const eCollider = ecs.getComponent<ColliderComponent>(e, 'collider')!;
+    const eRigid = ecs.getComponent<RigidBodyComponent>(e, 'rigidbody');
+    const eControl = ecs.getComponent<ControlComponent>(e, 'control');
+    if (eRigid) eRigid.groundedOn = null;
+    if (!eRigid || eRigid.type !== 'dynamic') continue;
+
+    for (const o of entities) {
+      if (e === o) continue;
+
+      const oTransform = ecs.getComponent<TransformComponent>(o, 'transform')!;
+      const oCollider = ecs.getComponent<ColliderComponent>(o, 'collider')!;
+      const oControl = ecs.getComponent<ControlComponent>(o, 'control');
+
+      const isTriggerPair = eCollider.onTrigger || oCollider.onTrigger;
+      if (isTriggerPair) {
+        if (intersects(eTransform.position, eCollider.size, oTransform.position, oCollider.size)) {
+          if (eCollider.onTrigger) recordTrigger(e, o);
+          if (oCollider.onTrigger) recordTrigger(o, e);
+        }
+        continue;
+      }
+
+      if (!intersects(eTransform.position, eCollider.size, oTransform.position, oCollider.size))
+        continue;
+
+      const platform = eCollider.oneWay ? e : oCollider.oneWay ? o : null;
+      if (platform) {
+        const isEPlatform = platform === e;
+        const platformTransform = isEPlatform ? eTransform : oTransform;
+        const actorTransform = isEPlatform ? oTransform : eTransform;
+        const actorCollider = isEPlatform ? oCollider : eCollider;
+        const actorControl = isEPlatform ? oControl : eControl;
+
+        const platformTop = platformTransform.position.y;
+        const actorBottom = actorTransform.position.y + actorCollider.size.height;
+        const isAbove = actorBottom - actorTransform.velocity.y <= platformTop;
+        const isFalling = actorTransform.velocity.y > 0;
+        const isDropping = actorControl?.drop;
+
+        if (!isAbove || !isFalling || isDropping) {
+          continue;
+        }
+      }
+
+      const eLeft = eTransform.position.x;
+      const eRight = eLeft + eCollider.size.width;
+      const oLeft = oTransform.position.x;
+      const oRight = oLeft + oCollider.size.width;
+      const horizontalOverlap = Math.min(eRight, oRight) - Math.max(eLeft, oLeft);
+      if (horizontalOverlap < eCollider.size.width * 0.1) continue;
+
+      const topOverlap = eTransform.position.y + eCollider.size.height - oTransform.position.y;
+      const bottomOverlap = oTransform.position.y + oCollider.size.height - eTransform.position.y;
+
+      if (topOverlap > EPS && topOverlap < bottomOverlap) {
+        eTransform.position.y -= topOverlap;
+        eTransform.velocity.y = 0;
+        if (eRigid && topOverlap > 0) eRigid.groundedOn = o;
+      } else if (bottomOverlap > EPS && bottomOverlap < topOverlap) {
+        eTransform.position.y += bottomOverlap;
+        eTransform.velocity.y = 0;
       }
     }
   }
 
   for (const [entity, collider] of ecs.componentsOfType<ColliderComponent>('collider')) {
     if (!collider.onTrigger) continue;
-
     const prev = prevTriggers.get(entity) || new Set();
     const curr = currentTriggers.get(entity) || new Set();
 

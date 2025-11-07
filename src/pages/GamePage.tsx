@@ -10,6 +10,7 @@ import Wall from '../NEW/game/entities/Wall.tsx';
 import Background from '../NEW/game/base/Background.tsx';
 import LongPlatform from '../NEW/game/entities/LongPlatform.tsx';
 import Spike from '../NEW/game/entities/Spike.tsx';
+import Ladder from '../NEW/game/entities/Ladder.tsx';
 
 const resolver = {
   '0': { Component: SmoothWall, type: 5 },
@@ -38,6 +39,8 @@ const resolver = {
 
   '18': { Component: Platform, type: 1 },
   '20': { Component: Platform, type: 2 },
+
+  '19': { Component: Ladder, type: 0 },
 };
 
 type GamePageProps = {
@@ -53,7 +56,7 @@ const GamePage: FC<GamePageProps> = ({ onFinish }) => {
 
         <Camera
           target={Symbol.for('player')}
-          lerp={1}
+          lerp={0.1}
           zoom={1}
           bounds={{ minX: 0, minY: -400, maxX: 1000, maxY: 96 }}
         />

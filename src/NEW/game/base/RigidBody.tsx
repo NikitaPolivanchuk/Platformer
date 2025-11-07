@@ -5,24 +5,24 @@ import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
 
 interface RigidBodyProps {
   type: 'dynamic' | 'kinematic';
-  gravity?: number;
+  gravityScale?: number;
   maxFallSpeed?: number;
 }
 
-const RigidBody: FC<RigidBodyProps> = ({ type, gravity = 0, maxFallSpeed = 0 }) => {
+const RigidBody: FC<RigidBodyProps> = ({ type, gravityScale = 0, maxFallSpeed = 0 }) => {
   const id = useEntity();
   const ecs = useEcs();
 
   useLayoutEffect(() => {
     ecs.addComponent<RigidBodyComponent>(id, 'rigidbody', {
       type,
-      gravityForce: gravity,
+      gravityScale,
       maxFallSpeed,
       groundedOn: null,
     });
 
     return () => ecs.removeComponent(id, 'rigidbody');
-  }, [ecs, gravity, id, maxFallSpeed, type]);
+  }, [ecs, gravityScale, id, maxFallSpeed, type]);
 
   return null;
 };

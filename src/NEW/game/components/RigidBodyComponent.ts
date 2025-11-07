@@ -1,6 +1,6 @@
 export default interface RigidBodyComponent {
   type: 'dynamic' | 'kinematic';
   groundedOn: symbol | null;
-  gravityForce: number;
+  gravityScale: number;
   maxFallSpeed: number;
 }

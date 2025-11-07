@@ -16,7 +16,7 @@ interface LongPlatformProps {
 const LongPlatform: FC<LongPlatformProps> = ({ points, position, speed }) => {
   return (
     <Entity position={position}>
-      <Collider size={{ width: 144, height: 12 }} oneWay />
+      <Collider size={{ width: 144, height: 12 }} />
       <Sprite src={LongPlatformSprite} size={{ width: 144, height: 12 }} />
       <RigidBody type={'kinematic'} />
       <Path points={points} speed={speed} />

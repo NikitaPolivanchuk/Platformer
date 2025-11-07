@@ -1,4 +1,4 @@
-import { type FC } from 'react';
+import type { FC } from 'react';
 import Entity from '../../base/Entity';
 import type { Vector } from '../../types.ts';
 import Collider from '../../base/Collider.tsx';
@@ -7,6 +7,7 @@ import PlayerControl from './PlayerControl.tsx';
 import playerSheet from '@assets/player.png';
 import AnimatedSprite from '../../base/AnimatedSprite.tsx';
 import PlayerAnimationController from './PlayerAnimationController.tsx';
+import PlayerState from './PlayerState.tsx';
 
 interface PlayerProps {
   position: Vector;
@@ -17,9 +18,10 @@ const Player: FC<PlayerProps> = ({ position }) => {
     <Entity id={Symbol.for('player')} position={position}>
       <PlayerAnimationController />
       <PlayerControl />
+      <PlayerState />
       <AnimatedSprite
         src={playerSheet}
-        size={{ width: 36, height: 64 }}
+        size={{ width: 42, height: 68 }}
         currentAnimation={'idle'}
         animations={{
           idle: {
@@ -32,10 +34,20 @@ const Player: FC<PlayerProps> = ({ position }) => {
             frameTime: 0.25,
             frameY: 0,
           },
+          climb: {
+            frameCount: 3,
+            frameTime: 0.4,
+            frameY: 1,
+          },
+          fall: {
+            frameCount: 1,
+            frameTime: 1,
+            frameY: 2,
+          },
         }}
       />
       <Collider size={{ width: 36, height: 64 }} />
-      <RigidBody gravity={100} maxFallSpeed={200} type={'dynamic'} />
+      <RigidBody gravityScale={1} maxFallSpeed={300} type={'dynamic'} />
     </Entity>
   );
 };
