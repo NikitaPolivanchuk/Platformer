@@ -18,10 +18,10 @@ const Player: FC<PlayerProps> = ({ position }) => {
     <Entity id={Symbol.for('player')} position={position}>
       <PlayerAnimationController />
       <PlayerControl />
-      <PlayerState />
+      <PlayerState startPosition={position} />
       <AnimatedSprite
         src={playerSheet}
-        size={{ width: 42, height: 68 }}
+        size={{ width: 43, height: 68 }}
         currentAnimation={'idle'}
         animations={{
           idle: {
@@ -47,7 +47,7 @@ const Player: FC<PlayerProps> = ({ position }) => {
         }}
       />
       <Collider size={{ width: 36, height: 64 }} />
-      <RigidBody gravityScale={1} maxFallSpeed={300} type={'dynamic'} />
+      <RigidBody gravityScale={1} maxFallSpeed={500} type={'dynamic'} />
     </Entity>
   );
 };

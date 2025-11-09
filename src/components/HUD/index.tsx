@@ -5,7 +5,7 @@ const HUD: FC = () => {
   const { level, lives, score } = useGameState();
 
   return (
-    <div>
+    <div style={{ color: 'white' }}>
       <div>Level: {level}</div>
       <div>Lives: {lives}</div>
       <div>Score: {score}</div>

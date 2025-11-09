@@ -2,8 +2,8 @@ import type { FC } from 'react';
 import Entity from '../wrappers/Entity';
 import Collider from '../wrappers/Collider.tsx';
 import Sprite from '../wrappers/Sprite.tsx';
-import ladderSheet from '@assets/ladder.png';
-import type { Vector } from '../types.ts';
+import spriteSrc from '@assets/ladder.png';
+import type { CollisionPhase, Vector } from '../types.ts';
 import useEcs from '../ecs/useEcs.ts';
 import type PlayerStateComponent from '../components/PlayerStateComponent.ts';
 
@@ -14,7 +14,7 @@ type LadderProps = {
 const Ladder: FC<LadderProps> = ({ position }) => {
   const esc = useEcs();
 
-  const handleCollision = (_: symbol, other: symbol, phase: 'enter' | 'stay' | 'exit') => {
+  const handleCollision = (_: symbol, other: symbol, phase: CollisionPhase) => {
     const playerState = esc.getComponent<PlayerStateComponent>(other, 'playerState');
     if (!playerState) {
       return;
@@ -24,12 +24,13 @@ const Ladder: FC<LadderProps> = ({ position }) => {
     if (!playerState.canClimb) {
       playerState.isClimbing = false;
     }
+
   };
 
   return (
     <Entity position={position}>
       <Collider size={{ width: 64, height: 64 }} onTrigger={handleCollision} />
-      <Sprite src={ladderSheet} size={{ width: 64, height: 64 }} />
+      <Sprite src={spriteSrc} size={{ width: 64, height: 64 }} />
     </Entity>
   );
 };

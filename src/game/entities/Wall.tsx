@@ -1,4 +1,4 @@
-import wallSheet from '@assets/wall.png';
+import spriteSrc from '@assets/wall.png';
 import type { Vector } from '../types.ts';
 import type { FC } from 'react';
 import Entity from '../wrappers/Entity';
@@ -14,7 +14,7 @@ const Wall: FC<WallProps> = ({ position, type }) => {
   return (
     <Entity position={position}>
       <Collider size={{ width: 64, height: 64 }} />
-      <Sprite src={wallSheet} size={{ width: 64, height: 64 }} type={type} />
+      <Sprite src={spriteSrc} size={{ width: 64, height: 64 }} type={type} />
     </Entity>
   );
 };

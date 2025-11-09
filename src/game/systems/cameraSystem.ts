@@ -25,8 +25,13 @@ const cameraSystem = (ecs: Ecs, ctx: CanvasRenderingContext2D) => {
     cam.position.y += (targetPos.y - cam.position.y) * cam.lerp;
 
     if (cam.bounds) {
-      cam.position.x = Math.max(cam.bounds.minX, Math.min(cam.position.x, cam.bounds.maxX));
-      cam.position.y = Math.max(cam.bounds.minY, Math.min(cam.position.y, cam.bounds.maxY));
+      const { minX, maxX, minY, maxY, left, right, top, bottom } = cam.bounds;
+
+      if (left !== false && minX !== undefined) cam.position.x = Math.max(minX, cam.position.x);
+      if (right !== false && maxX !== undefined) cam.position.x = Math.min(maxX, cam.position.x);
+
+      if (top !== false && minY !== undefined) cam.position.y = Math.max(minY, cam.position.y);
+      if (bottom !== false && maxY !== undefined) cam.position.y = Math.min(maxY, cam.position.y);
     }
   }
 };

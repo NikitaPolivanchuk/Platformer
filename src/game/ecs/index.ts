@@ -14,6 +14,10 @@ type Component =
 export default class Ecs {
   private components: Map<Component, Map<symbol, object>> = new Map();
 
+  removeEntity(id: symbol) {
+    this.components.forEach((component) => component.delete(id));
+  }
+
   addComponent<T extends object>(id: symbol, name: Component, data: T) {
     if (!this.components.has(name)) {
       this.components.set(name, new Map());

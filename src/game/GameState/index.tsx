@@ -18,9 +18,7 @@ const GameState: FC<GameStateProviderProps> = ({ children, onGameOver }) => {
   }, [lives, onGameOver]);
 
   return (
-    <GameStateContext.Provider
-      value={{ level, setLevel, score, setScore, lives, setLives }}
-    >
+    <GameStateContext.Provider value={{ level, setLevel, score, setScore, lives, setLives }}>
       {children}
     </GameStateContext.Provider>
   );

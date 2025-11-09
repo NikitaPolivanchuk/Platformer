@@ -1,20 +1,18 @@
-import Entity from '../wrappers/Entity';
-import type { Vector } from '../types.ts';
 import type { FC } from 'react';
+import type { Size, Vector } from '../types.ts';
+import Entity from '../wrappers/Entity';
 import Collider from '../wrappers/Collider.tsx';
-import Sprite from '../wrappers/Sprite.tsx';
-import spriteSrc from '@assets/spike.png';
-import useEcs from '../ecs/useEcs.ts';
-import type PlayerStateComponent from '../components/PlayerStateComponent.ts';
-import type TransformComponent from '../components/TransformComponent.ts';
 import useGameState from '../GameState/useGameState.ts';
+import useEcs from '../ecs/useEcs.ts';
+import type TransformComponent from '../components/TransformComponent.ts';
+import type PlayerStateComponent from '../components/PlayerStateComponent.ts';
 
-interface VerticalSpikeProps {
+interface VoidProps {
   position: Vector;
-  type: number;
+  size: Size;
 }
 
-const Spike: FC<VerticalSpikeProps> = ({ position, type }) => {
+const Void: FC<VoidProps> = ({ position, size }) => {
   const { setLives } = useGameState();
   const ecs = useEcs();
 
@@ -40,10 +38,9 @@ const Spike: FC<VerticalSpikeProps> = ({ position, type }) => {
 
   return (
     <Entity position={position}>
-      <Sprite src={spriteSrc} size={{ width: 64, height: 64 }} type={type} />
-      <Collider size={{ width: 64, height: 64 }} onTrigger={handleCollision} />
+      <Collider size={size} onTrigger={handleCollision} />
     </Entity>
   );
 };
 
-export default Spike;
+export default Void;
