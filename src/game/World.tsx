@@ -13,6 +13,7 @@ import useWindowSize from '../hooks/useWindowSize.ts';
 import type { Size } from './types.ts';
 import type CameraComponent from './components/CameraComponent.ts';
 import playerStateSystem from './systems/playerStateSystem.ts';
+import useGameState from './GameState/useGameState.ts';
 
 type Props = {
   children?: ReactNode;
@@ -20,8 +21,10 @@ type Props = {
 };
 
 const World: FC<Props> = ({ mapSize, children }) => {
+  const { paused } = useGameState();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const ecsRef = useRef(new Ecs());
+  ecsRef.current.paused = paused;
 
   const { width: windowWidth, height: windowHeight } = useWindowSize();
 
@@ -59,12 +62,14 @@ const World: FC<Props> = ({ mapSize, children }) => {
         }
         accumulator = 0;
 
-        controlSystem(ecs);
-        pathSystem(ecs);
-        physicsSystem(ecs, dt);
-        movementSystem(ecs, dt);
-        collisionSystem(ecs);
-        playerStateSystem(ecs, dt);
+        if (!ecs.paused) {
+          controlSystem(ecs);
+          pathSystem(ecs);
+          physicsSystem(ecs, dt);
+          movementSystem(ecs, dt);
+          collisionSystem(ecs);
+          playerStateSystem(ecs, dt);
+        }
         cameraSystem(ecs, ctx);
         renderSystem(ecs, ctx, dt);
       }
