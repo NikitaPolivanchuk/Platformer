@@ -12,6 +12,7 @@ type Component =
   | 'playerState';
 
 export default class Ecs {
+  public paused: boolean = false;
   private components: Map<Component, Map<symbol, object>> = new Map();
 
   removeEntity(id: symbol) {

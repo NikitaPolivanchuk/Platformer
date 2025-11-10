@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import type { Size, Vector } from '../types.ts';
 import Entity from '../wrappers/Entity';
 import Collider from '../wrappers/Collider.tsx';
-import useGameState from '../GameState/useGameState.ts';
+import useGameState from '../contexts/GameState/useGameState.ts';
 import useEcs from '../ecs/useEcs.ts';
 import type TransformComponent from '../components/TransformComponent.ts';
 import type PlayerStateComponent from '../components/PlayerStateComponent.ts';

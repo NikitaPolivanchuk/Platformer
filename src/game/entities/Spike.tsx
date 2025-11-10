@@ -7,7 +7,7 @@ import spriteSrc from '@assets/spike.png';
 import useEcs from '../ecs/useEcs.ts';
 import type PlayerStateComponent from '../components/PlayerStateComponent.ts';
 import type TransformComponent from '../components/TransformComponent.ts';
-import useGameState from '../GameState/useGameState.ts';
+import useGameState from '../contexts/GameState/useGameState.ts';
 
 interface VerticalSpikeProps {
   position: Vector;

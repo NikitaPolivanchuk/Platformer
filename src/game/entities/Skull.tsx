@@ -3,7 +3,7 @@ import Entity from '../wrappers/Entity';
 import type { Vector } from '../types.ts';
 import AnimatedSprite from '../wrappers/AnimatedSprite.tsx';
 import spriteSrc from '@assets/skull.png';
-import useGameState from '../GameState/useGameState.ts';
+import useGameState from '../contexts/GameState/useGameState.ts';
 import Collider from '../wrappers/Collider.tsx';
 
 interface SkullProps {

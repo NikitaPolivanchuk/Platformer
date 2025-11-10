@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import useGameState from '../game/GameState/useGameState.ts';
+import useGameState from '../game/contexts/GameState/useGameState.ts';
 
 type ResultPageProps = {
   onRestart: () => void;
@@ -10,11 +10,10 @@ const ResultPage: FC<ResultPageProps> = ({ onRestart }) => {
 
   return (
     <div>
-      <h1>Game completed</h1>
-      <div>stats:</div>
+      <h1>Game Results</h1>
       <div>Score: {score}</div>
       <div>Levels completed: {level - 1}</div>
-      <button onClick={onRestart}>restart</button>
+      <button onClick={onRestart}>start page</button>
     </div>
   );
 };
