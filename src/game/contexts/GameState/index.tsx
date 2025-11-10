@@ -1,12 +1,14 @@
 import { type FC, type ReactNode, useState } from 'react';
 import GameStateContext from './GameStateContext.ts';
-import { LIVES_COUNT } from '../constants.ts';
+import useGameOptions from '../GameOptions/useGameOptions.ts';
 
 type GameStateProviderProps = {
   children: ReactNode;
 };
 
-const GameState: FC<GameStateProviderProps> = ({ children }) => {
+const GameStateProvider: FC<GameStateProviderProps> = ({ children }) => {
+  const { options } = useGameOptions();
+
   const [level, setLevel] = useState(1);
   const [score, setScore] = useState(0);
   const [lives, setLives] = useState(3);
@@ -16,7 +18,7 @@ const GameState: FC<GameStateProviderProps> = ({ children }) => {
   const reset = () => {
     setScore(0);
     setLevel(1);
-    setLives(LIVES_COUNT);
+    setLives(options.general.lives);
     setPaused(false);
     setWorldVersion((prev) => prev + 1);
   };
@@ -41,4 +43,4 @@ const GameState: FC<GameStateProviderProps> = ({ children }) => {
   );
 };
 
-export default GameState;
+export default GameStateProvider;

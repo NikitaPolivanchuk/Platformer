@@ -1,17 +1,18 @@
 import { type FC, type ReactNode, useEffect, useMemo } from 'react';
 import FirstLevel from '../game/levels/First';
-import useGameState from '../game/GameState/useGameState.ts';
+import useGameState from '../game/contexts/GameState/useGameState.ts';
 import HUD from '../components/HUD';
 import SecondLevel from '../game/levels/Second';
-import PauseModal from '../components/PauseModal.tsx';
-import EndGameModal from '../components/EndGameModal.tsx';
+import PauseModal from '../components/modals/PauseModal.tsx';
+import EndGameModal from '../components/modals/EndGameModal.tsx';
 import useKeyPress from '../hooks/useKeyPress.ts';
 
 type GamePageProps = {
   onFinish: () => void;
+  onStart: () => void;
 };
 
-const GamePage: FC<GamePageProps> = ({ onFinish }) => {
+const GamePage: FC<GamePageProps> = ({ onFinish, onStart }) => {
   const { level, lives, setPaused, paused, worldVersion } = useGameState();
   const keyPress = useKeyPress(['Escape']);
 
@@ -40,7 +41,7 @@ const GamePage: FC<GamePageProps> = ({ onFinish }) => {
         <button onClick={() => setPaused(true)}>pause</button>
         <HUD />
       </div>
-      {paused && lives > 0 && level <= 2 && <PauseModal />}
+      {paused && lives > 0 && level <= 2 && <PauseModal onStart={onStart} />}
       {paused && (level > 2 || lives < 1) && (
         <EndGameModal title={level > 2 ? 'Game Finished' : 'You Died'} onResults={onFinish} />
       )}

@@ -1,18 +1,19 @@
 import { type FC, useState } from 'react';
 import type { Vector } from '../types.ts';
-import useGameState from '../GameState/useGameState.ts';
+import useGameState from '../contexts/GameState/useGameState.ts';
 import useEcs from '../ecs/useEcs.ts';
-import { COIN_SCORE } from '../constants.ts';
 import Entity from '../wrappers/Entity';
 import spriteSrc from '@assets/coin.png';
 import AnimatedSprite from '../wrappers/AnimatedSprite.tsx';
 import Collider from '../wrappers/Collider.tsx';
+import useGameOptions from '../contexts/GameOptions/useGameOptions.ts';
 
 interface CoinProps {
   position: Vector;
 }
 
 const Coin: FC<CoinProps> = ({ position }) => {
+  const { options } = useGameOptions();
   const { setScore } = useGameState();
   const ecs = useEcs();
   const [collected, setCollected] = useState(false);
@@ -25,7 +26,7 @@ const Coin: FC<CoinProps> = ({ position }) => {
     if (other !== Symbol.for('player')) {
       return;
     }
-    setScore((prev) => prev + COIN_SCORE);
+    setScore((prev) => prev + options.variables.coinValue);
     ecs.removeEntity(self);
     setCollected(true);
   };

@@ -13,7 +13,8 @@ import useWindowSize from '../hooks/useWindowSize.ts';
 import type { Size } from './types.ts';
 import type CameraComponent from './components/CameraComponent.ts';
 import playerStateSystem from './systems/playerStateSystem.ts';
-import useGameState from './GameState/useGameState.ts';
+import useGameState from './contexts/GameState/useGameState.ts';
+import useGameOptions from './contexts/GameOptions/useGameOptions.ts';
 
 type Props = {
   children?: ReactNode;
@@ -21,6 +22,7 @@ type Props = {
 };
 
 const World: FC<Props> = ({ mapSize, children }) => {
+  const { options } = useGameOptions();
   const { paused } = useGameState();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const ecsRef = useRef(new Ecs());
@@ -63,9 +65,9 @@ const World: FC<Props> = ({ mapSize, children }) => {
         accumulator = 0;
 
         if (!ecs.paused) {
-          controlSystem(ecs);
+          controlSystem(ecs, options);
           pathSystem(ecs);
-          physicsSystem(ecs, dt);
+          physicsSystem(ecs, dt, options);
           movementSystem(ecs, dt);
           collisionSystem(ecs);
           playerStateSystem(ecs, dt);
@@ -81,7 +83,7 @@ const World: FC<Props> = ({ mapSize, children }) => {
     return () => {
       mounted = false;
     };
-  }, [collisionSystem, mapSize, windowHeight, windowWidth]);
+  }, [collisionSystem, mapSize, options, windowHeight, windowWidth]);
 
   useLayoutEffect(() => {
     const ecs = ecsRef.current;

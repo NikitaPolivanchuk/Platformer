@@ -7,13 +7,13 @@ if (!root) {
   throw new Error('Modal root is missing');
 }
 
-interface ModalProps {
+interface ModalBaseProps {
   open: boolean;
   onClose?: () => void;
   children?: ReactNode;
 }
 
-const Modal: FC<ModalProps> = ({ open, onClose, children }) => {
+const ModalBase: FC<ModalBaseProps> = ({ open, onClose, children }) => {
   if (!open) {
     return null;
   }
@@ -33,4 +33,4 @@ const Modal: FC<ModalProps> = ({ open, onClose, children }) => {
   );
 };
 
-export default Modal;
+export default ModalBase;
