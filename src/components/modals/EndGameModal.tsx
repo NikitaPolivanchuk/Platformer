@@ -1,14 +1,16 @@
 import type { FC } from 'react';
 import ModalBase from './ModalBase';
 import useGameState from '../../game/contexts/GameState/useGameState.ts';
+import { useNavigate, useParams } from 'react-router-dom';
 
 interface EndGameModalProps {
   title: string;
-  onResults: () => void;
 }
 
-const EndGameModal: FC<EndGameModalProps> = ({ title, onResults }) => {
+const EndGameModal: FC<EndGameModalProps> = ({ title }) => {
   const { score, level, reset } = useGameState();
+  const navigate = useNavigate();
+  const { name } = useParams();
 
   return (
     <ModalBase open>
@@ -17,7 +19,7 @@ const EndGameModal: FC<EndGameModalProps> = ({ title, onResults }) => {
       <div>Levels completed: {level - 1}</div>
       <div style={{ marginTop: '1rem' }}>
         <button onClick={reset}>Reset</button>
-        <button onClick={onResults}>Results</button>
+        <button onClick={() => void navigate(`/leaderboard/${name}`)}>Leaderboard</button>
       </div>
     </ModalBase>
   );

@@ -26,7 +26,7 @@ const VariableSettingsForm: FC = () => {
     if (validation.success) {
       setOptions(validation.data);
     }
-  }, [options, setOptions, watchedValues]);
+  }, [setOptions, watchedValues]);
 
   return (
     <form onSubmit={(e) => void handleSubmit(() => setOptions(options))(e)}>

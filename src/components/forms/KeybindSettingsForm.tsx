@@ -13,26 +13,23 @@ const KeybindSettingsForm = () => {
   const {
     control,
     formState: { errors },
-    reset,
     trigger,
   } = useForm<GameOptions>({
     resolver: zodResolver(gameOptionsSchema),
     defaultValues: options,
-    mode: 'onChange',
   });
   const watchedOptions = useWatch({ control });
 
   useEffect(() => {
-    reset(options);
-  }, [options, reset]);
+    void trigger('keybinds');
+  }, [trigger, watchedOptions.keybinds]);
 
   useEffect(() => {
     const validation = gameOptionsSchema.safeParse(watchedOptions);
     if (validation.success) {
       setOptions(validation.data);
     }
-    void trigger('keybinds');
-  }, [setOptions, trigger, watchedOptions]);
+  }, [setOptions, watchedOptions]);
 
   return (
     <form>
@@ -43,7 +40,7 @@ const KeybindSettingsForm = () => {
         const fieldError = errors.keybinds?.[action];
 
         return (
-          <div key={action} style={{ marginBottom: '0.5rem' }}>
+          <div key={`${action}-${errors.keybinds?.message}`} style={{ marginBottom: '0.5rem' }}>
             <label>
               <span
                 style={{

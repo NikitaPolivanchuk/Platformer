@@ -1,13 +1,11 @@
 import ModalBase from './ModalBase';
 import type { FC } from 'react';
 import useGameState from '../../game/contexts/GameState/useGameState.ts';
+import { useNavigate } from 'react-router-dom';
 
-interface PauseModalProps {
-  onStart: () => void;
-}
-
-const PauseModal: FC<PauseModalProps> = ({ onStart }) => {
+const PauseModal: FC = () => {
   const { setPaused, reset } = useGameState();
+  const navigate = useNavigate();
 
   return (
     <ModalBase open onClose={() => setPaused(false)}>
@@ -15,7 +13,7 @@ const PauseModal: FC<PauseModalProps> = ({ onStart }) => {
       <div style={{ marginTop: '1rem' }}>
         <button onClick={() => setPaused(false)}>Resume</button>
         <button onClick={reset}>Reset</button>
-        <button onClick={onStart}>Main Menu</button>
+        <button onClick={() => void navigate('/')}>Main Menu</button>
       </div>
     </ModalBase>
   );
