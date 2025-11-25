@@ -12,58 +12,87 @@ const Start: FC = () => {
   const [name, setName] = useState('');
   const [nameError, setNameError] = useState('');
 
-  const handleStart = async () => {
+  const validateName = () => {
     if (!name.trim()) {
-      setNameError('Name is required');
-      return;
+      setNameError('Please enter a nickname to continue.');
+      return false;
     }
+    setNameError('');
+    return true;
+  };
+
+  const handleStart = async () => {
+    if (!validateName()) return;
     reset();
     await navigate(`/game/${name}`);
   };
 
   const handleLeaderboard = async () => {
-    if (!name.trim()) {
-      setNameError('Name is required');
-      return;
-    }
+    if (!validateName()) return;
     await navigate(`/leaderboard/${name}`);
   };
 
   return (
-    <div>
-      <h1>Platformer Game</h1>
-      <div>
-        <p>
-          <img src={coinGif} alt="coin" height="16px" /> Collect coins to gain score.
+    <div className="min-h-screen bg-neutral-900 text-gray-100 flex flex-col items-center p-6">
+      <h1 className="text-3xl font-bold mb-6">Platformer Game</h1>
+
+      <div className="bg-neutral-800 p-4 rounded-lg w-full max-w-md shadow-lg mb-6">
+        <p className="flex items-center gap-2 mb-2">
+          <img src={coinGif} alt="coin" height="16" />
+          Collect coins to gain score.
         </p>
-        <p>
-          <img src={skullGif} alt="skull" height="20px" />
-          Reach the exit portal to proceed to the next level.
+        <p className="flex items-center gap-2 mb-2">
+          <img src={skullGif} alt="skull" height="20" />
+          Reach the skull to proceed to the next level.
         </p>
-        <p>Avoid traps!</p>
       </div>
-      <label style={{ display: 'block' }}>
-        Name
+
+      <div className="w-full max-w-md mb-4">
+        <label className="block font-semibold mb-1">Nickname</label>
         <input
           type="text"
           value={name}
-          onChange={({ target: { value } }) => {
-            if (!value.trim()) {
-              setNameError('Name is required');
-            } else {
-              setNameError('');
-            }
-            setName(value);
+          onChange={(e) => {
+            const v = e.target.value;
+            setName(v);
+            if (v.trim()) setNameError('');
           }}
+          className={`w-full px-3 py-2 rounded-md bg-neutral-800 text-gray-100 
+            focus:outline-none border 
+            ${nameError ? 'border-red-500' : 'border-neutral-700 focus:border-blue-400'}
+          `}
+          placeholder="Enter nickname to continue..."
         />
-      </label>
-      {nameError && <div style={{ color: 'red' }}>{nameError}</div>}
-      <div>
-        <button onClick={() => void handleStart()}>Start game</button>
-        <button onClick={() => void handleLeaderboard()}>Leaderboard</button>
+        {nameError && <p className="text-red-500 text-sm mt-1">{nameError}</p>}
       </div>
-      <KeybindSettingsForm />
-      <VariableSettingsForm />
+
+      <div className="flex gap-4 w-full max-w-md mb-8">
+        <button
+          onClick={() => void handleStart()}
+          className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-900
+                     text-white py-2 rounded-md font-semibold transition"
+          disabled={!name.trim()}
+        >
+          Start Game
+        </button>
+
+        <button
+          onClick={() => void handleLeaderboard()}
+          className="flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-900
+                     text-white py-2 rounded-md font-semibold transition"
+          disabled={!name.trim()}
+        >
+          Leaderboard
+        </button>
+      </div>
+
+      <div className="bg-neutral-800 p-4 rounded-lg w-full max-w-md shadow-md mb-6">
+        <KeybindSettingsForm />
+      </div>
+
+      <div className="bg-neutral-800 p-4 rounded-lg w-full max-w-md shadow-md">
+        <VariableSettingsForm />
+      </div>
     </div>
   );
 };

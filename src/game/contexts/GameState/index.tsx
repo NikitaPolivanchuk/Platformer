@@ -18,7 +18,7 @@ const GameStateProvider: FC<GameStateProviderProps> = ({ children }) => {
   const reset = () => {
     setScore(0);
     setLevel(1);
-    setLives(options.general.lives);
+    setLives(options.variables.lives);
     setPaused(false);
     setWorldVersion((prev) => prev + 1);
   };

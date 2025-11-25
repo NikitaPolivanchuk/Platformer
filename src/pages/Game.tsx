@@ -15,9 +15,11 @@ const Game: FC = () => {
   const { name } = useParams();
   const { saveScore } = useLeaderboard();
 
-  if (keyPress) {
-    setPaused((prev) => !prev);
-  }
+  useEffect(() => {
+    if (keyPress) {
+      setPaused((prev) => !prev);
+    }
+  }, [keyPress, setPaused]);
 
   useEffect(() => {
     if (level > 2 || lives < 1) {
@@ -37,12 +39,21 @@ const Game: FC = () => {
   );
 
   return (
-    <div>
+    <div className="relative w-full h-full bg-neutral-900 text-gray-100">
       {levels[level]}
-      <div style={{ position: 'absolute' }}>
-        <button onClick={() => setPaused(true)}>pause</button>
+      <button
+        onClick={() => setPaused(true)}
+        className="
+            px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold
+            rounded-md shadow-md transition absolute top-4 right-4
+          "
+      >
+        Pause
+      </button>
+      <div className="absolute left-4 top-4">
         <HUD />
       </div>
+
       {paused && lives > 0 && level <= 2 && <PauseModal />}
       {paused && (level > 2 || lives < 1) && (
         <EndGameModal title={level > 2 ? 'Game Finished' : 'You Died'} />
