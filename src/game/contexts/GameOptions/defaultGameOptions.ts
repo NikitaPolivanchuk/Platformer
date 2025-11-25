@@ -1,9 +1,6 @@
 import type { GameOptions } from './GameOptions.ts';
 
 const defaultGameOptions: GameOptions = {
-  general: {
-    lives: 3,
-  },
   keybinds: {
     up: 'w',
     down: 's',
@@ -12,6 +9,7 @@ const defaultGameOptions: GameOptions = {
     jump: ' ',
   },
   variables: {
+    lives: 3,
     speed: 220,
     gravity: 600,
     jump: 400,

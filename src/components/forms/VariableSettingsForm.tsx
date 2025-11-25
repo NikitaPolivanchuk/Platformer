@@ -19,6 +19,7 @@ const VariableSettingsForm: FC = () => {
     defaultValues: options,
     mode: 'onChange',
   });
+
   const watchedValues = useWatch({ control });
 
   useEffect(() => {
@@ -26,35 +27,37 @@ const VariableSettingsForm: FC = () => {
     if (validation.success) {
       setOptions(validation.data);
     }
-  }, [options, setOptions, watchedValues]);
+  }, [watchedValues, setOptions]);
 
   return (
     <form onSubmit={(e) => void handleSubmit(() => setOptions(options))(e)}>
-      <h2>Variables</h2>
+      <h2 className="text-xl font-semibold mb-2">Variables</h2>
+
+      <p className="text-yellow-400 text-sm mb-4 bg-neutral-700 border border-neutral-600 p-2 rounded">
+        Changing values may break the game or behave unpredictably.
+      </p>
+
       {Object.keys(options.variables).map((variableStr) => {
         const variable = variableStr as keyof GameOptions['variables'];
+        const fieldError = errors.variables?.[variable];
+
         return (
-          <div key={variable}>
-            <label>
-              <span
-                style={{
-                  marginRight: '8px',
-                  width: '80px',
-                  display: 'inline-block',
-                  textTransform: 'capitalize',
-                }}
-              >
-                {variable}:
-              </span>
+          <div key={variable} className="mb-4">
+            <label className="flex items-center gap-4">
+              <span className="w-32 capitalize text-gray-300">{variable}:</span>
+
               <input
-                {...register(`variables.${variable}`, { valueAsNumber: true })}
                 type="number"
+                {...register(`variables.${variable}`, { valueAsNumber: true })}
+                className={`
+                  px-3 py-1 rounded-md bg-neutral-700 text-gray-100
+                  border border-neutral-600 focus:border-blue-400
+                  focus:outline-none w-36
+                `}
               />
             </label>
 
-            {errors.variables?.[variable] && (
-              <p style={{ color: 'red' }}>{errors.variables[variable]?.message}</p>
-            )}
+            {fieldError && <p className="text-red-500 text-sm mt-1 ml-32">{fieldError.message}</p>}
           </div>
         );
       })}

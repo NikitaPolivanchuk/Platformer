@@ -1,24 +1,22 @@
-import { useState } from 'react';
-import StartPage from './pages/StartPage.tsx';
-import GamePage from './pages/GamePage.tsx';
-import ResultPage from './pages/ResultPage.tsx';
+import { type FC } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Start from './pages/Start.tsx';
+import Game from './pages/Game.tsx';
+import Leaderboard from './pages/Leaderboard.tsx';
 import GameStateProvider from './game/contexts/GameState';
 import GameOptionsProvider from './game/contexts/GameOptions';
 
-function App() {
-  const [page, setPage] = useState<'start' | 'game' | 'result'>('start');
-
-  return (
-    <GameOptionsProvider>
-      <GameStateProvider>
-        {page === 'start' && <StartPage onStart={() => setPage('game')} />}
-        {page === 'game' && (
-          <GamePage onStart={() => setPage('start')} onFinish={() => setPage('result')} />
-        )}
-        {page === 'result' && <ResultPage onRestart={() => setPage('start')} />}
-      </GameStateProvider>
-    </GameOptionsProvider>
-  );
-}
+const App: FC = () => (
+  <GameOptionsProvider>
+    <GameStateProvider>
+      <Routes>
+        <Route path="/" element={<Start />} />
+        <Route path="/game/:name" element={<Game />} />
+        <Route path="/leaderboard/:name" element={<Leaderboard />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </GameStateProvider>
+  </GameOptionsProvider>
+);
 
 export default App;

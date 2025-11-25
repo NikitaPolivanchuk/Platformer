@@ -1,4 +1,4 @@
-import { type FC, useEffect, useRef, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 
 const toLabel = (key: string) => {
   return key === ' ' ? 'Space' : key;
@@ -11,7 +11,6 @@ interface KeyInputProps {
 
 const KeyInput: FC<KeyInputProps> = ({ value, onChange }) => {
   const [listening, setListening] = useState(false);
-  const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!listening) {
@@ -20,8 +19,7 @@ const KeyInput: FC<KeyInputProps> = ({ value, onChange }) => {
 
     const handleKeyDown = (e: KeyboardEvent) => {
       e.preventDefault();
-      const key = e.key;
-      onChange(key);
+      onChange(e.key);
       setListening(false);
     };
 
@@ -30,7 +28,16 @@ const KeyInput: FC<KeyInputProps> = ({ value, onChange }) => {
   }, [listening, onChange]);
 
   return (
-    <button type="button" ref={buttonRef} onClick={() => setListening(true)}>
+    <button
+      type="button"
+      onClick={() => setListening(true)}
+      className={`
+        px-3 py-1 rounded-md text-sm font-medium w-full text-left
+        transition border bg-neutral-700 text-gray-100
+        hover:bg-neutral-600
+        ${listening ? 'border-blue-400 shadow-lg shadow-blue-500/30' : 'border-neutral-600'}
+      `}
+    >
       {listening ? 'Press a key...' : toLabel(value) || 'Unassigned'}
     </button>
   );
