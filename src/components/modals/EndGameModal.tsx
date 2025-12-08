@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import useGameState from '../../game/contexts/GameState/useGameState.ts';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import Modal from '../ui/Modal';
 
 interface EndGameModalProps {

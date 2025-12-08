@@ -6,7 +6,7 @@ import SecondLevel from '../game/levels/Second';
 import PauseModal from '../components/modals/PauseModal.tsx';
 import EndGameModal from '../components/modals/EndGameModal.tsx';
 import useKeyPress from '../hooks/useKeyPress.ts';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { useLeaderboard } from '../hooks/useLeaderboard.ts';
 
 const Game: FC = () => {

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import useGameState from '../../game/contexts/GameState/useGameState.ts';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import Modal from '../ui/Modal/index.ts';
 
 const PauseModal: FC = () => {

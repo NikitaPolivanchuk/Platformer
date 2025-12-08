@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router';
 import Start from './pages/Start.tsx';
 import Game from './pages/Game.tsx';
 import Leaderboard from './pages/Leaderboard.tsx';

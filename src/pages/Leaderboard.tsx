@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import { useLeaderboard } from '../hooks/useLeaderboard.ts';
 
 const Leaderboard: FC = () => {
