@@ -4,7 +4,7 @@ import { type FC, useLayoutEffect } from 'react';
 import useKeyPress from '../../../hooks/useKeyPress.ts';
 import type { Vector } from '../../types.ts';
 import type ControlComponent from '../../components/ControlComponent.ts';
-import useGameOptions from '../../contexts/GameOptions/useGameOptions.ts';
+import { useGameOptions } from '../../../store/gameOptions.ts';
 
 const PlayerControl: FC = () => {
   const {

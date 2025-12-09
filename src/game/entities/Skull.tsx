@@ -3,21 +3,21 @@ import Entity from '../wrappers/Entity';
 import type { Vector } from '../types.ts';
 import AnimatedSprite from '../wrappers/AnimatedSprite.tsx';
 import spriteSrc from '@assets/skull.png';
-import useGameState from '../contexts/GameState/useGameState.ts';
 import Collider from '../wrappers/Collider.tsx';
+import { useGameState } from '../../store/gameState.ts';
 
 interface SkullProps {
   position: Vector;
 }
 
 const Skull: FC<SkullProps> = ({ position }) => {
-  const { setLevel } = useGameState();
+  const { level, update } = useGameState();
 
   const handleCollision = (_: symbol, other: symbol) => {
     if (other !== Symbol.for('player')) {
       return;
     }
-    setLevel((prev) => prev + 1);
+    update({ level: level + 1 });
   };
 
   return (

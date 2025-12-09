@@ -2,10 +2,10 @@ import type { FC } from 'react';
 import type { Size, Vector } from '../types.ts';
 import Entity from '../wrappers/Entity';
 import Collider from '../wrappers/Collider.tsx';
-import useGameState from '../contexts/GameState/useGameState.ts';
 import useEcs from '../ecs/useEcs.ts';
 import type TransformComponent from '../components/TransformComponent.ts';
 import type PlayerStateComponent from '../components/PlayerStateComponent.ts';
+import { useGameState } from '../../store/gameState.ts';
 
 interface VoidProps {
   position: Vector;
@@ -13,7 +13,7 @@ interface VoidProps {
 }
 
 const Void: FC<VoidProps> = ({ position, size }) => {
-  const { setLives } = useGameState();
+  const { lives, update } = useGameState();
   const ecs = useEcs();
 
   const handleCollision = (_: symbol, other: symbol) => {
@@ -33,7 +33,7 @@ const Void: FC<VoidProps> = ({ position, size }) => {
 
     state.invulnerableTime = 0.5;
 
-    setLives((prev) => prev - 1);
+    update({ lives: lives - 1 });
   };
 
   return (

@@ -1,6 +1,5 @@
 import { type FC, type ReactNode, useEffect, useMemo } from 'react';
 import FirstLevel from '../game/levels/First';
-import useGameState from '../game/contexts/GameState/useGameState.ts';
 import HUD from '../components/HUD';
 import SecondLevel from '../game/levels/Second';
 import PauseModal from '../components/modals/PauseModal.tsx';
@@ -8,41 +7,44 @@ import EndGameModal from '../components/modals/EndGameModal.tsx';
 import useKeyPress from '../hooks/useKeyPress.ts';
 import { useParams } from 'react-router';
 import { useLeaderboard } from '../hooks/useLeaderboard.ts';
+import { useGameState } from '../store/gameState.ts';
 
 const Game: FC = () => {
-  const { level, score, lives, setPaused, paused, worldVersion } = useGameState();
+  const { level, score, lives, paused, worldVersion, update } = useGameState();
   const keyPress = useKeyPress(['Escape']);
   const { name } = useParams();
   const { saveScore } = useLeaderboard();
 
   useEffect(() => {
     if (keyPress) {
-      setPaused((prev) => !prev);
+      update({ paused: !paused });
     }
-  }, [keyPress, setPaused]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [keyPress, update]);
 
   useEffect(() => {
     if (level > 2 || lives < 1) {
-      setPaused(true);
+      update({ paused: true });
       if (name) {
         saveScore(name, score);
       }
     }
-  }, [level, lives, name, saveScore, score, setPaused]);
+  }, [level, lives, name, saveScore, score, update]);
 
   const levels = useMemo<Record<number, ReactNode>>(
     () => ({
       1: <FirstLevel />,
       2: <SecondLevel />,
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [worldVersion],
   );
 
   return (
     <div className="relative w-full h-full bg-neutral-900 text-gray-100">
-      {levels[level]}
+      {levels[level] ?? <div className="bg-neutral-900 relative w-screen h-screen"></div>}
       <button
-        onClick={() => setPaused(true)}
+        onClick={() => update({ paused: true })}
         className="
             px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold
             rounded-md shadow-md transition absolute top-4 right-4
