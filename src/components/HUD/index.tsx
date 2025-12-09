@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import useGameState from '../../game/contexts/GameState/useGameState.ts';
+import { useGameState } from '../../store/gameState.ts';
 
 const HUD: FC = () => {
   const { level, lives, score } = useGameState();

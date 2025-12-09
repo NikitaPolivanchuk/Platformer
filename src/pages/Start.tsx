@@ -1,10 +1,10 @@
 import { type FC, useState } from 'react';
-import useGameState from '../game/contexts/GameState/useGameState.ts';
 import KeybindSettingsForm from '../components/forms/KeybindSettingsForm.tsx';
 import VariableSettingsForm from '../components/forms/VariableSettingsForm.tsx';
 import { useNavigate } from 'react-router';
 import coinGif from '@assets/coin.gif';
 import skullGif from '@assets/skull.gif';
+import { useGameState } from '../store/gameState.ts';
 
 const Start: FC = () => {
   const navigate = useNavigate();

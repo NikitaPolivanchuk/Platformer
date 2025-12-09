@@ -1,11 +1,8 @@
 import { type FC, useEffect } from 'react';
-import useGameOptions from '../../game/contexts/GameOptions/useGameOptions.ts';
 import { useForm, useWatch } from 'react-hook-form';
-import {
-  type GameOptions,
-  gameOptionsSchema,
-} from '../../game/contexts/GameOptions/GameOptions.ts';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { type GameOptions, useGameOptions } from '../../store/gameOptions.ts';
+import { gameOptionsSchema } from '../../schemas/gameOptionsSchema.ts';
 
 const VariableSettingsForm: FC = () => {
   const { options, setOptions } = useGameOptions();

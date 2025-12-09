@@ -13,8 +13,8 @@ import useWindowSize from '../hooks/useWindowSize.ts';
 import type { Size } from './types.ts';
 import type CameraComponent from './components/CameraComponent.ts';
 import playerStateSystem from './systems/playerStateSystem.ts';
-import useGameState from './contexts/GameState/useGameState.ts';
-import useGameOptions from './contexts/GameOptions/useGameOptions.ts';
+import { useGameOptions } from '../store/gameOptions.ts';
+import { useGameState } from '../store/gameState.ts';
 
 type Props = {
   children?: ReactNode;

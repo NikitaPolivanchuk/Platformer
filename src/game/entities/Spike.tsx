@@ -7,7 +7,7 @@ import spriteSrc from '@assets/spike.png';
 import useEcs from '../ecs/useEcs.ts';
 import type PlayerStateComponent from '../components/PlayerStateComponent.ts';
 import type TransformComponent from '../components/TransformComponent.ts';
-import useGameState from '../contexts/GameState/useGameState.ts';
+import { useGameState } from '../../store/gameState.ts';
 
 interface VerticalSpikeProps {
   position: Vector;
@@ -15,7 +15,7 @@ interface VerticalSpikeProps {
 }
 
 const Spike: FC<VerticalSpikeProps> = ({ position, type }) => {
-  const { setLives } = useGameState();
+  const { lives, update } = useGameState();
   const ecs = useEcs();
 
   const handleCollision = (_: symbol, other: symbol) => {
@@ -35,7 +35,7 @@ const Spike: FC<VerticalSpikeProps> = ({ position, type }) => {
 
     state.invulnerableTime = 0.5;
 
-    setLives((prev) => prev - 1);
+    update({ lives: lives - 1 });
   };
 
   return (

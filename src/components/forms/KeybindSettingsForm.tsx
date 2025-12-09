@@ -1,12 +1,9 @@
-import useGameOptions from '../../game/contexts/GameOptions/useGameOptions.ts';
 import { Controller, useForm, useWatch } from 'react-hook-form';
-import {
-  type GameOptions,
-  gameOptionsSchema,
-} from '../../game/contexts/GameOptions/GameOptions.ts';
 import { zodResolver } from '@hookform/resolvers/zod';
 import KeyInput from '../ui/KeyInput.tsx';
 import { useEffect } from 'react';
+import { type GameOptions, useGameOptions } from '../../store/gameOptions.ts';
+import { gameOptionsSchema } from '../../schemas/gameOptionsSchema.ts';
 
 const KeybindSettingsForm = () => {
   const { options, setOptions } = useGameOptions();
