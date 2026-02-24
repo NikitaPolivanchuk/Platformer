@@ -1,0 +1,59 @@
+# Platformer Game
+
+A simple, lightweight 2D platformer game built with [React](https://react.dev), [TypeScript](https://www.typescriptlang.org), and [Vite](https://vite.dev).
+
+## Description
+
+This is a lightweight platformer featuring **2 levels**. The primary objective of the game is to guide your character to the **Skull** at the end of the map to proceed to the next level. Along the way, you must carefully avoid dangerous obstacles while collecting coins to rack up the highest score possible.
+
+## Features
+
+- **Levels**: Progress through two stages of increasing difficulty.
+- **Score System**: Collect coins scattered around the map to boost your score.
+- **Local Leaderboard**: Track your best runs! High scores are saved locally so you can compete against your friends or own personal best.
+- **Obstacle Avoidance**: Test your reflexes by dodging various obstacles that will stop you in your tracks.
+
+## How to Play
+
+1. **Movement**: Use the `W A S D` and `Space` to move and jump.
+2. **Collect Coins**: Grab the golden coins to increase your total score.
+3. **Avoid Obstacles**: Do not touch the hazards, or you might have to restart
+4. **Win Condition**: Reach and touch the **Skull** to complete the current level and advance.
+
+## Installation
+
+To run this project locally on your machine, follow these steps:
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com) installed on your system.
+
+### Steps
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/NikitaPolivanchuk/Platformer.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Platformer
+    ```
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm run dev
+    ```
+    (This will open the game on a local port, usually http://localhost:5173/)
+
+
+## Available Scripts
+
+Use these commands to manage the project:
+
+* **`npm run dev`** – Launches the Vite development server. Use this for active coding.
+* **`npm run build`** – Runs the TypeScript compiler (`tsc`) and builds the optimized production bundle.
+* **`npm run lint`** – Scans the codebase for styling and logic errors using ESLint.
+* **`npm run preview`** – Serves the production build locally for final testing before deployment.
