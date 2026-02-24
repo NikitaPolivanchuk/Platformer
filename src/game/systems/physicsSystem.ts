@@ -1,7 +1,7 @@
 import type Ecs from '../ecs';
 import type TransformComponent from '../components/TransformComponent.ts';
 import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
-import type { GameOptions } from '../contexts/GameOptions/GameOptions.ts';
+import type { GameOptions } from '../../store/gameOptions.ts';
 
 const physicsSystem = (ecs: Ecs, dt: number, options: GameOptions) => {
   for (const id of ecs.entitiesWith('transform', 'rigidbody')) {

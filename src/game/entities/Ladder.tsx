@@ -24,7 +24,6 @@ const Ladder: FC<LadderProps> = ({ position }) => {
     if (!playerState.canClimb) {
       playerState.isClimbing = false;
     }
-
   };
 
   return (

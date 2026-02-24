@@ -3,7 +3,7 @@ import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
 import type ControlComponent from '../components/ControlComponent.ts';
 import type TransformComponent from '../components/TransformComponent.ts';
 import type PlayerStateComponent from '../components/PlayerStateComponent.ts';
-import type { GameOptions } from '../contexts/GameOptions/GameOptions.ts';
+import type { GameOptions } from '../../store/gameOptions.ts';
 
 const controlSystem = (ecs: Ecs, options: GameOptions) => {
   const players = ecs.entitiesWith('transform', 'rigidbody', 'control');

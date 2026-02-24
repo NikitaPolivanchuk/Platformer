@@ -60,7 +60,7 @@ export const createCollisionSystem = () => {
           const actorBottom = actorTransform.position.y + actorCollider.size.height;
           const isAbove = actorBottom - actorTransform.velocity.y <= platformTop;
           const isFalling = actorTransform.velocity.y > 0;
-          const isDropping = actorControl?.drop;
+          const isDropping = (actorControl?.direction.y ?? 0) > 0;
 
           if (!isAbove || !isFalling || isDropping) {
             continue;
@@ -129,7 +129,7 @@ export const createCollisionSystem = () => {
           const actorBottom = actorTransform.position.y + actorCollider.size.height;
           const isAbove = actorBottom - actorTransform.velocity.y <= platformTop;
           const isFalling = actorTransform.velocity.y > 0;
-          const isDropping = actorControl?.drop;
+          const isDropping = (actorControl?.direction.y ?? 0) > 0;
 
           if (!isAbove || !isFalling || isDropping) {
             continue;
