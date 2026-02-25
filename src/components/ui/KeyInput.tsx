@@ -4,11 +4,30 @@ const toLabel = (key: string) => {
   return key === ' ' ? 'Space' : key;
 };
 
-interface KeyInputProps {
+/**
+ * Props for {@link KeyInput}.
+ */
+export interface KeyInputProps {
+  /**
+   * Currently assigned key value.
+   */
   value: string;
+
+  /**
+   * Callback invoked when a new key is selected.
+   */
   onChange: (key: string) => void;
 }
 
+/**
+ * Interactive key binding input component.
+ *
+ * When clicked, enters "listening" mode and captures
+ * the next pressed keyboard key. The selected key
+ * is passed to `onChange`.
+ *
+ * Prevents default browser behavior while listening.
+ */
 const KeyInput: FC<KeyInputProps> = ({ value, onChange }) => {
   const [listening, setListening] = useState(false);
 

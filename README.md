@@ -55,8 +55,9 @@ Use these commands to manage the project:
 
 * **`npm run dev`** – Launches the Vite development server. Use this for active coding.
 * **`npm run build`** – Runs the TypeScript compiler (`tsc`) and builds the optimized production bundle.
-* **`npm run lint`** – Scans the codebase for styling and logic errors using ESLint.
+* **`npm run lint`** – Scans the codebase for styling and logic errors using [ESLint](https://eslint.org).
 * **`npm run preview`** – Serves the production build locally for final testing before deployment.
+* **`npm run docs`** – Generates project documentation using [TypeDoc](https://typedoc.org).
 
 ## License
 

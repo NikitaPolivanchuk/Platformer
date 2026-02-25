@@ -4,6 +4,15 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { type GameOptions, useGameOptions } from '../../store/gameOptions.ts';
 import { gameOptionsSchema } from '../../schemas/gameOptionsSchema.ts';
 
+/**
+ * Form component for configuring numeric game variables.
+ *
+ * Uses react-hook-form with Zod validation in `onChange` mode.
+ * Automatically syncs valid form values into global game options.
+ *
+ * Warning:
+ * Changing variable values may cause unstable or unpredictable gameplay.
+ */
 const VariableSettingsForm: FC = () => {
   const { options, setOptions } = useGameOptions();
   const {

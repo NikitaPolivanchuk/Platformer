@@ -6,6 +6,26 @@ import type AnimatedSpriteComponent from '../components/AnimatedSpriteComponent.
 import type { AnimationControllerComponent } from '../components/AnimationControllerComponent.ts';
 import type BackgroundComponent from '../components/BackgroundComponent.ts';
 
+/**
+ * ECS system responsible for rendering all visible entities.
+ *
+ * Handles:
+ * - Background drawing
+ * - Camera transform (position + zoom)
+ * - Static sprites
+ * - Animated sprites with frame updates
+ * - Sprite flipping based on velocity
+ *
+ * @param ecs - The ECS world instance.
+ * @param ctx - Canvas 2D rendering context.
+ * @param dt - Delta time (in seconds), used for animation timing.
+ *
+ * @remarks
+ * - Uses the first available camera entity (if any).
+ * - Rendering is done in world space, adjusted by camera position.
+ * - Animation frames are advanced based on elapsed time.
+ * - Pixel alignment is applied to reduce subpixel blurring.
+ */
 const renderSystem = (ecs: Ecs, ctx: CanvasRenderingContext2D, dt: number) => {
   const cameraEntities = ecs.entitiesWith('camera');
   const cam = cameraEntities.length

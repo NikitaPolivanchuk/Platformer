@@ -2,6 +2,20 @@ import type Ecs from '../ecs';
 import type TransformComponent from '../components/TransformComponent.ts';
 import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
 
+/**
+ * ECS system that integrates velocity into position.
+ *
+ * Applies movement using delta time and handles moving platforms
+ * by inheriting the grounded entity's velocity.
+ *
+ * @param ecs - The ECS world instance.
+ * @param dt - Delta time (in seconds).
+ *
+ * @remarks
+ * - Operates on entities with `transform`.
+ * - If grounded on another entity, applies platform motion.
+ * - Performs simple Euler integration.
+ */
 const movementSystem = (ecs: Ecs, dt: number) => {
   for (const e of ecs.entitiesWith('transform')) {
     const transform = ecs.getComponent<TransformComponent>(e, 'transform')!;

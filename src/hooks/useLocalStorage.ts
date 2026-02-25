@@ -1,5 +1,20 @@
 import { useCallback, useEffect, useState } from 'react';
 
+/**
+ * React hook that synchronizes state with `window.localStorage`.
+ *
+ * @typeParam T - Type of the stored value.
+ * @param key - The localStorage key.
+ * @param initialValue - Default value used if no value exists in storage
+ * or if parsing fails.
+ *
+ * @returns A tuple containing:
+ * - The current stored value.
+ * - A setter function that updates both state and localStorage.
+ *
+ * @example
+ * const [theme, setTheme] = useLocalStorage<'light' | 'dark'>('theme', 'light');
+ */
 const useLocalStorage = <T>(
   key: string,
   initialValue: T,

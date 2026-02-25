@@ -5,6 +5,25 @@ import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
 import { intersects } from '../utils.ts';
 import type ControlComponent from '../components/ControlComponent.ts';
 
+/**
+ * Factory that creates the collision system for the ECS world.
+ *
+ * Handles:
+ * - AABB collision detection
+ * - Dynamic vs static resolution
+ * - One-way platforms
+ * - Trigger enter/stay/exit events
+ * - Ground detection for rigid bodies
+ *
+ * @returns A collision system function to be executed each frame.
+ *
+ * @remarks
+ * - Only entities with `transform` and `collider` are considered.
+ * - Collision resolution is separated into horizontal and vertical passes.
+ * - Trigger interactions are tracked frame-to-frame to generate
+ *   `enter`, `stay`, and `exit` events.
+ * - Designed for axis-aligned bounding boxes (AABB).
+ */
 export const createCollisionSystem = () => {
   const prevTriggers = new Map<symbol, Set<symbol>>();
 

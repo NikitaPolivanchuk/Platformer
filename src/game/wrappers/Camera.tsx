@@ -3,12 +3,26 @@ import type { Vector } from '../types.ts';
 import useEcs from '../ecs/useEcs.ts';
 import type CameraComponent from '../components/CameraComponent.ts';
 
-interface CameraProps {
+/**
+ * Props for {@link Camera}.
+ */
+export interface CameraProps {
+  /** Optional camera entity id. */
   id?: symbol;
+
+  /** Entity to follow. */
   target?: symbol;
-  offset?: Vector;
+
+  /** Follow interpolation factor (0–1). */
   lerp?: number;
+
+  /** Zoom level. */
   zoom?: number;
+
+  /** Positional offset from target. */
+  offset?: Vector;
+
+  /** Optional boundary constraints. */
   bounds?: {
     top?: boolean;
     bottom?: boolean;
@@ -17,6 +31,12 @@ interface CameraProps {
   };
 }
 
+/**
+ * Declarative camera component.
+ *
+ * Registers a CameraComponent used by rendering systems
+ * to determine viewport position and scaling.
+ */
 const Camera: FC<CameraProps> = ({
   id = Symbol('camera'),
   target,

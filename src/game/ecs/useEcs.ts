@@ -1,6 +1,15 @@
 import { useContext } from 'react';
 import EcsContext from './EcsContext.ts';
 
+/**
+ * React hook for accessing the ECS instance.
+ *
+ * Must be used within a component wrapped by
+ * an `EcsContext.Provider`.
+ *
+ * @throws Error if used outside the ECS provider.
+ * @returns The active ECS instance.
+ */
 const useEcs = () => {
   const ecs = useContext(EcsContext);
   if (!ecs) {

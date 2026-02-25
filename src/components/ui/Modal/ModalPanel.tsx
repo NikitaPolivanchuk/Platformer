@@ -1,9 +1,20 @@
 import type { FC, ReactNode } from 'react';
 
-interface ModalPanelProps {
+/**
+ * Props for {@link ModalPanel}.
+ */
+export interface ModalPanelProps {
+  /**
+   * Panel content.
+   */
   children?: ReactNode;
 }
 
+/**
+ * Main modal container panel.
+ *
+ * Provides layout, border, animation, and styling.
+ */
 const ModalPanel: FC<ModalPanelProps> = ({ children }) => (
   <div
     className="
