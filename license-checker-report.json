@@ -1,0 +1,1578 @@
+{
+  "@bufbuild/protobuf@2.9.0": {
+    "licenses": "(Apache-2.0 AND BSD-3-Clause)",
+    "repository": "https://github.com/bufbuild/protobuf-es",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@bufbuild\\protobuf",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@bufbuild\\protobuf\\README.md"
+  },
+  "@esbuild/win32-x64@0.25.10": {
+    "licenses": "MIT",
+    "repository": "https://github.com/evanw/esbuild",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@esbuild\\win32-x64",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@esbuild\\win32-x64\\README.md"
+  },
+  "@eslint-community/eslint-utils@4.9.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint-community/eslint-utils",
+    "publisher": "Toru Nagashima",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint-community\\eslint-utils",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint-community\\eslint-utils\\LICENSE"
+  },
+  "@eslint-community/regexpp@4.12.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint-community/regexpp",
+    "publisher": "Toru Nagashima",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint-community\\regexpp",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint-community\\regexpp\\LICENSE"
+  },
+  "@eslint/config-array@0.21.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-array",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-array\\LICENSE"
+  },
+  "@eslint/config-helpers@0.4.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-helpers",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-helpers\\LICENSE"
+  },
+  "@eslint/core@0.17.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\core",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\core\\LICENSE"
+  },
+  "@eslint/eslintrc@3.3.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslintrc",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\eslintrc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\eslintrc\\LICENSE"
+  },
+  "@eslint/js@9.39.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\js",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\js\\LICENSE"
+  },
+  "@eslint/object-schema@2.1.7": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\object-schema",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\object-schema\\LICENSE"
+  },
+  "@eslint/plugin-kit@0.4.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/rewrite",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\plugin-kit",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\plugin-kit\\LICENSE"
+  },
+  "@gerrit0/mini-shiki@3.23.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Gerrit0/mini-shiki",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@gerrit0\\mini-shiki",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@gerrit0\\mini-shiki\\LICENSE"
+  },
+  "@hookform/resolvers@5.2.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/react-hook-form/resolvers",
+    "publisher": "bluebill1049",
+    "email": "bluebill1049@hotmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@hookform\\resolvers",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@hookform\\resolvers\\LICENSE"
+  },
+  "@humanfs/core@0.19.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/humanwhocodes/humanfs",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@humanfs\\core",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@humanfs\\core\\LICENSE"
+  },
+  "@humanfs/node@0.16.7": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/humanwhocodes/humanfs",
+    "publisher": "Nicholas C. Zakas",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@humanfs\\node",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@humanfs\\node\\LICENSE"
+  },
+  "@humanwhocodes/module-importer@1.0.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/humanwhocodes/module-importer",
+    "publisher": "Nicholas C. Zaks",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@humanwhocodes\\module-importer",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@humanwhocodes\\module-importer\\LICENSE"
+  },
+  "@humanwhocodes/retry@0.4.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/humanwhocodes/retry",
+    "publisher": "Nicholas C. Zaks",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@humanwhocodes\\retry",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@humanwhocodes\\retry\\LICENSE"
+  },
+  "@jridgewell/gen-mapping@0.3.13": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jridgewell/sourcemaps",
+    "publisher": "Justin Ridgewell",
+    "email": "justin@ridgewell.name",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\gen-mapping",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\gen-mapping\\LICENSE"
+  },
+  "@jridgewell/remapping@2.3.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jridgewell/sourcemaps",
+    "publisher": "Justin Ridgewell",
+    "email": "justin@ridgewell.name",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\remapping",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\remapping\\LICENSE"
+  },
+  "@jridgewell/resolve-uri@3.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jridgewell/resolve-uri",
+    "publisher": "Justin Ridgewell",
+    "email": "justin@ridgewell.name",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\resolve-uri",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\resolve-uri\\LICENSE"
+  },
+  "@jridgewell/sourcemap-codec@1.5.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jridgewell/sourcemaps",
+    "publisher": "Justin Ridgewell",
+    "email": "justin@ridgewell.name",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\sourcemap-codec",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\sourcemap-codec\\LICENSE"
+  },
+  "@jridgewell/trace-mapping@0.3.31": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jridgewell/sourcemaps",
+    "publisher": "Justin Ridgewell",
+    "email": "justin@ridgewell.name",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\trace-mapping",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@jridgewell\\trace-mapping\\LICENSE"
+  },
+  "@parcel/watcher-win32-x64@2.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/parcel-bundler/watcher",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@parcel\\watcher-win32-x64",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@parcel\\watcher-win32-x64\\LICENSE"
+  },
+  "@parcel/watcher@2.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/parcel-bundler/watcher",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@parcel\\watcher",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@parcel\\watcher\\LICENSE"
+  },
+  "@pkgr/core@0.2.9": {
+    "licenses": "MIT",
+    "repository": "https://github.com/un-ts/pkgr",
+    "publisher": "JounQin",
+    "email": "admin@1stg.me",
+    "url": "https://www.1stG.me",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@pkgr\\core"
+  },
+  "@rolldown/pluginutils@1.0.0-beta.35": {
+    "licenses": "MIT",
+    "repository": "https://github.com/rolldown/rolldown",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@rolldown\\pluginutils",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@rolldown\\pluginutils\\LICENSE"
+  },
+  "@rollup/rollup-win32-x64-gnu@4.52.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/rollup/rollup",
+    "publisher": "Lukas Taegert-Atkinson",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@rollup\\rollup-win32-x64-gnu",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@rollup\\rollup-win32-x64-gnu\\README.md"
+  },
+  "@rollup/rollup-win32-x64-msvc@4.52.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/rollup/rollup",
+    "publisher": "Lukas Taegert-Atkinson",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@rollup\\rollup-win32-x64-msvc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@rollup\\rollup-win32-x64-msvc\\README.md"
+  },
+  "@shikijs/engine-oniguruma@3.23.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/shikijs/shiki",
+    "publisher": "Anthony Fu",
+    "email": "anthonyfu117@hotmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\engine-oniguruma",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\engine-oniguruma\\LICENSE"
+  },
+  "@shikijs/langs@3.23.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/shikijs/shiki",
+    "publisher": "Anthony Fu",
+    "email": "anthonyfu117@hotmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\langs",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\langs\\LICENSE"
+  },
+  "@shikijs/themes@3.23.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/shikijs/shiki",
+    "publisher": "Anthony Fu",
+    "email": "anthonyfu117@hotmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\themes",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\themes\\LICENSE"
+  },
+  "@shikijs/types@3.23.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/shikijs/shiki",
+    "publisher": "Anthony Fu",
+    "email": "anthonyfu117@hotmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\types",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\types\\LICENSE"
+  },
+  "@shikijs/vscode-textmate@10.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/shikijs/vscode-textmate",
+    "publisher": "Microsoft Corporation",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\vscode-textmate",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@shikijs\\vscode-textmate\\LICENSE.md"
+  },
+  "@standard-schema/utils@0.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/standard-schema/standard-schema",
+    "publisher": "Fabian Hiller",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@standard-schema\\utils",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@standard-schema\\utils\\LICENSE"
+  },
+  "@swc/core-win32-x64-msvc@1.13.5": {
+    "licenses": "Apache-2.0 AND MIT",
+    "repository": "https://github.com/swc-project/swc",
+    "publisher": "강동윤",
+    "email": "kdy1997.dev@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@swc\\core-win32-x64-msvc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@swc\\core-win32-x64-msvc\\README.md"
+  },
+  "@swc/core@1.13.5": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/swc-project/swc",
+    "publisher": "강동윤",
+    "email": "kdy1997.dev@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@swc\\core",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@swc\\core\\README.md"
+  },
+  "@swc/counter@0.1.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/swc-project/pkgs",
+    "publisher": "강동윤",
+    "email": "kdy1997.dev@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@swc\\counter",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@swc\\counter\\README.md"
+  },
+  "@swc/types@0.1.25": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/swc-project/swc",
+    "publisher": "강동윤",
+    "email": "kdy1997.dev@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@swc\\types",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@swc\\types\\LICENSE"
+  },
+  "@tailwindcss/node@4.1.17": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/tailwindcss",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@tailwindcss\\node",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@tailwindcss\\node\\LICENSE"
+  },
+  "@tailwindcss/oxide-win32-x64-msvc@4.1.17": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/tailwindcss",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@tailwindcss\\oxide-win32-x64-msvc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@tailwindcss\\oxide-win32-x64-msvc\\LICENSE"
+  },
+  "@tailwindcss/oxide@4.1.17": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/tailwindcss",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@tailwindcss\\oxide",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@tailwindcss\\oxide\\LICENSE"
+  },
+  "@tailwindcss/vite@4.1.17": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/tailwindcss",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@tailwindcss\\vite",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@tailwindcss\\vite\\LICENSE"
+  },
+  "@types/estree@1.0.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\estree",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\estree\\LICENSE"
+  },
+  "@types/hast@3.0.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\hast",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\hast\\LICENSE"
+  },
+  "@types/json-schema@7.0.15": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\json-schema",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\json-schema\\LICENSE"
+  },
+  "@types/node@24.5.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\node",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\node\\LICENSE"
+  },
+  "@types/react-dom@19.1.9": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\react-dom",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\react-dom\\LICENSE"
+  },
+  "@types/react@19.1.13": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\react",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\react\\LICENSE"
+  },
+  "@types/unist@3.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\unist",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\unist\\LICENSE"
+  },
+  "@typescript-eslint/eslint-plugin@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\eslint-plugin",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\eslint-plugin\\LICENSE"
+  },
+  "@typescript-eslint/parser@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\parser",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\parser\\LICENSE"
+  },
+  "@typescript-eslint/project-service@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\project-service",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\project-service\\LICENSE"
+  },
+  "@typescript-eslint/scope-manager@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\scope-manager",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\scope-manager\\LICENSE"
+  },
+  "@typescript-eslint/tsconfig-utils@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\tsconfig-utils",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\tsconfig-utils\\LICENSE"
+  },
+  "@typescript-eslint/type-utils@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\type-utils",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\type-utils\\LICENSE"
+  },
+  "@typescript-eslint/types@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\types",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\types\\LICENSE"
+  },
+  "@typescript-eslint/typescript-estree@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\typescript-estree",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\typescript-estree\\LICENSE"
+  },
+  "@typescript-eslint/utils@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\utils",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\utils\\LICENSE"
+  },
+  "@typescript-eslint/visitor-keys@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\visitor-keys",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\visitor-keys\\LICENSE"
+  },
+  "@vitejs/plugin-react-swc@4.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/vitejs/vite-plugin-react",
+    "publisher": "Arnaud Barré",
+    "url": "https://github.com/ArnaudBarre",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@vitejs\\plugin-react-swc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@vitejs\\plugin-react-swc\\LICENSE"
+  },
+  "acorn-jsx@5.3.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/acornjs/acorn-jsx",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\acorn-jsx",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\acorn-jsx\\LICENSE"
+  },
+  "acorn@8.16.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/acornjs/acorn",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\acorn",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\acorn\\LICENSE"
+  },
+  "ajv@6.14.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ajv-validator/ajv",
+    "publisher": "Evgeny Poberezkin",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ajv",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ajv\\LICENSE"
+  },
+  "ansi-styles@4.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/ansi-styles",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ansi-styles",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ansi-styles\\license"
+  },
+  "argparse@2.0.1": {
+    "licenses": "Python-2.0",
+    "repository": "https://github.com/nodeca/argparse",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\argparse",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\argparse\\LICENSE"
+  },
+  "balanced-match@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/balanced-match",
+    "publisher": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-array\\node_modules\\balanced-match",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-array\\node_modules\\balanced-match\\LICENSE.md"
+  },
+  "balanced-match@4.0.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/balanced-match",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\balanced-match",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\balanced-match\\LICENSE.md"
+  },
+  "brace-expansion@1.1.12": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/brace-expansion",
+    "publisher": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-array\\node_modules\\brace-expansion",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-array\\node_modules\\brace-expansion\\LICENSE"
+  },
+  "brace-expansion@2.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/brace-expansion",
+    "publisher": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typedoc\\node_modules\\brace-expansion",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typedoc\\node_modules\\brace-expansion\\LICENSE"
+  },
+  "brace-expansion@5.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/brace-expansion",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\brace-expansion",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\brace-expansion\\LICENSE"
+  },
+  "braces@3.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/braces",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\braces",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\braces\\LICENSE"
+  },
+  "buffer-builder@0.2.0": {
+    "licenses": "MIT*",
+    "repository": "https://github.com/PeterReid/node-buffer-builder",
+    "publisher": "Peter Reid",
+    "email": "peter.d.reid@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\buffer-builder",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\buffer-builder\\LICENSE.txt"
+  },
+  "callsites@3.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/callsites",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\callsites",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\callsites\\license"
+  },
+  "chalk@4.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/chalk",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\chalk",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\chalk\\license"
+  },
+  "chokidar@4.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/paulmillr/chokidar",
+    "publisher": "Paul Miller",
+    "url": "https://paulmillr.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\chokidar",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\chokidar\\LICENSE"
+  },
+  "color-convert@2.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Qix-/color-convert",
+    "publisher": "Heather Arthur",
+    "email": "fayearthur@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\color-convert",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\color-convert\\LICENSE"
+  },
+  "color-name@1.1.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/colorjs/color-name",
+    "publisher": "DY",
+    "email": "dfcreative@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\color-name",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\color-name\\LICENSE"
+  },
+  "colorjs.io@0.5.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/LeaVerou/color.js",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\colorjs.io",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\colorjs.io\\LICENSE"
+  },
+  "concat-map@0.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/substack/node-concat-map",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\concat-map",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\concat-map\\LICENSE"
+  },
+  "cookie@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/cookie",
+    "publisher": "Roman Shtylman",
+    "email": "shtylman@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\cookie",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\cookie\\LICENSE"
+  },
+  "cross-spawn@7.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/moxystudio/node-cross-spawn",
+    "publisher": "André Cruz",
+    "email": "andre@moxy.studio",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\cross-spawn",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\cross-spawn\\LICENSE"
+  },
+  "csstype@3.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/frenic/csstype",
+    "publisher": "Fredrik Nicol",
+    "email": "fredrik.nicol@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\csstype",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\csstype\\LICENSE"
+  },
+  "debug@4.4.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/debug-js/debug",
+    "publisher": "Josh Junon",
+    "url": "https://github.com/qix-",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\debug",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\debug\\LICENSE"
+  },
+  "deep-is@0.1.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/thlorenz/deep-is",
+    "publisher": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "http://thlorenz.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\deep-is",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\deep-is\\LICENSE"
+  },
+  "detect-libc@1.0.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/lovell/detect-libc",
+    "publisher": "Lovell Fuller",
+    "email": "npm@lovell.info",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\detect-libc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\detect-libc\\LICENSE"
+  },
+  "detect-libc@2.1.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/lovell/detect-libc",
+    "publisher": "Lovell Fuller",
+    "email": "npm@lovell.info",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lightningcss\\node_modules\\detect-libc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lightningcss\\node_modules\\detect-libc\\LICENSE"
+  },
+  "enhanced-resolve@5.18.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/webpack/enhanced-resolve",
+    "publisher": "Tobias Koppers @sokra",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\enhanced-resolve",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\enhanced-resolve\\LICENSE"
+  },
+  "entities@4.5.0": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/fb55/entities",
+    "publisher": "Felix Boehm",
+    "email": "me@feedic.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\entities",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\entities\\LICENSE"
+  },
+  "esbuild@0.25.10": {
+    "licenses": "MIT",
+    "repository": "https://github.com/evanw/esbuild",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\esbuild",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\esbuild\\LICENSE.md"
+  },
+  "escape-string-regexp@4.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/escape-string-regexp",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\escape-string-regexp",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\escape-string-regexp\\license"
+  },
+  "eslint-config-prettier@10.1.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/prettier/eslint-config-prettier",
+    "publisher": "Simon Lydell",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-config-prettier",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-config-prettier\\LICENSE"
+  },
+  "eslint-plugin-prettier@5.5.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/prettier/eslint-plugin-prettier",
+    "publisher": "Teddy Katz",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-plugin-prettier",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-plugin-prettier\\LICENSE.md"
+  },
+  "eslint-plugin-react-hooks@5.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/react",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-plugin-react-hooks",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-plugin-react-hooks\\LICENSE"
+  },
+  "eslint-plugin-react-refresh@0.4.21": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ArnaudBarre/eslint-plugin-react-refresh",
+    "publisher": "Arnaud Barré",
+    "url": "https://github.com/ArnaudBarre",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-plugin-react-refresh",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-plugin-react-refresh\\LICENSE"
+  },
+  "eslint-scope@8.4.0": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/eslint/js",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-scope",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-scope\\LICENSE"
+  },
+  "eslint-visitor-keys@3.4.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/eslint-visitor-keys",
+    "publisher": "Toru Nagashima",
+    "url": "https://github.com/mysticatea",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint-community\\eslint-utils\\node_modules\\eslint-visitor-keys",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint-community\\eslint-utils\\node_modules\\eslint-visitor-keys\\LICENSE"
+  },
+  "eslint-visitor-keys@4.2.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/js",
+    "publisher": "Toru Nagashima",
+    "url": "https://github.com/mysticatea",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\espree\\node_modules\\eslint-visitor-keys",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\espree\\node_modules\\eslint-visitor-keys\\LICENSE"
+  },
+  "eslint-visitor-keys@5.0.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/eslint/js",
+    "publisher": "Toru Nagashima",
+    "url": "https://github.com/mysticatea",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-visitor-keys",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint-visitor-keys\\LICENSE"
+  },
+  "eslint@9.39.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/eslint/eslint",
+    "publisher": "Nicholas C. Zakas",
+    "email": "nicholas+npm@nczconsulting.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\eslint\\LICENSE"
+  },
+  "espree@10.4.0": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/eslint/js",
+    "publisher": "Nicholas C. Zakas",
+    "email": "nicholas+npm@nczconsulting.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\espree",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\espree\\LICENSE"
+  },
+  "esquery@1.7.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/estools/esquery",
+    "publisher": "Joel Feenstra",
+    "email": "jrfeenst+esquery@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\esquery",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\esquery\\license.txt"
+  },
+  "esrecurse@4.3.0": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/estools/esrecurse",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\esrecurse",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\esrecurse\\README.md"
+  },
+  "estraverse@5.3.0": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/estools/estraverse",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\estraverse",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\estraverse\\LICENSE.BSD"
+  },
+  "esutils@2.0.3": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/estools/esutils",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\esutils",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\esutils\\LICENSE.BSD"
+  },
+  "fast-deep-equal@3.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/epoberezkin/fast-deep-equal",
+    "publisher": "Evgeny Poberezkin",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fast-deep-equal",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fast-deep-equal\\LICENSE"
+  },
+  "fast-diff@1.3.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/jhchen/fast-diff",
+    "publisher": "Jason Chen",
+    "email": "jhchen7@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fast-diff",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fast-diff\\LICENSE"
+  },
+  "fast-json-stable-stringify@2.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/epoberezkin/fast-json-stable-stringify",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fast-json-stable-stringify",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fast-json-stable-stringify\\LICENSE"
+  },
+  "fast-levenshtein@2.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/hiddentao/fast-levenshtein",
+    "publisher": "Ramesh Nair",
+    "email": "ram@hiddentao.com",
+    "url": "http://www.hiddentao.com/",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fast-levenshtein",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fast-levenshtein\\LICENSE.md"
+  },
+  "fdir@6.5.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/thecodrr/fdir",
+    "publisher": "thecodrr",
+    "email": "thecodrr@protonmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tinyglobby\\node_modules\\fdir",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tinyglobby\\node_modules\\fdir\\LICENSE"
+  },
+  "file-entry-cache@8.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jaredwray/file-entry-cache",
+    "publisher": "Jared Wray",
+    "url": "https://jaredwray.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\file-entry-cache",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\file-entry-cache\\LICENSE"
+  },
+  "fill-range@7.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/fill-range",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fill-range",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\fill-range\\LICENSE"
+  },
+  "find-up@5.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/find-up",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\find-up",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\find-up\\license"
+  },
+  "flat-cache@4.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jaredwray/flat-cache",
+    "publisher": "Jared Wray",
+    "url": "https://jaredwray.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\flat-cache",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\flat-cache\\LICENSE"
+  },
+  "flatted@3.3.3": {
+    "licenses": "ISC",
+    "repository": "https://github.com/WebReflection/flatted",
+    "publisher": "Andrea Giammarchi",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\flatted",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\flatted\\LICENSE"
+  },
+  "glob-parent@6.0.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/gulpjs/glob-parent",
+    "publisher": "Gulp Team",
+    "email": "team@gulpjs.com",
+    "url": "https://gulpjs.com/",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\glob-parent",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\glob-parent\\LICENSE"
+  },
+  "globals@14.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/globals",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\eslintrc\\node_modules\\globals",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\eslintrc\\node_modules\\globals\\license"
+  },
+  "globals@16.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/globals",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\globals",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\globals\\license"
+  },
+  "graceful-fs@4.2.11": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-graceful-fs",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\graceful-fs",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\graceful-fs\\LICENSE"
+  },
+  "has-flag@4.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/has-flag",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\has-flag",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\has-flag\\license"
+  },
+  "ignore@5.3.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/kaelzhang/node-ignore",
+    "publisher": "kael",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ignore",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ignore\\LICENSE-MIT"
+  },
+  "ignore@7.0.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/kaelzhang/node-ignore",
+    "publisher": "kael",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\eslint-plugin\\node_modules\\ignore",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@typescript-eslint\\eslint-plugin\\node_modules\\ignore\\LICENSE-MIT"
+  },
+  "immutable@5.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/immutable-js/immutable-js",
+    "publisher": "Lee Byron",
+    "url": "https://github.com/leebyron",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\immutable",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\immutable\\LICENSE"
+  },
+  "import-fresh@3.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/import-fresh",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\import-fresh",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\import-fresh\\license"
+  },
+  "imurmurhash@0.1.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jensyt/imurmurhash-js",
+    "publisher": "Jens Taylor",
+    "email": "jensyt@gmail.com",
+    "url": "https://github.com/homebrewing",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\imurmurhash",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\imurmurhash\\README.md"
+  },
+  "is-extglob@2.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-extglob",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\is-extglob",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\is-extglob\\LICENSE"
+  },
+  "is-glob@4.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/is-glob",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\is-glob",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\is-glob\\LICENSE"
+  },
+  "is-number@7.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-number",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\is-number",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\is-number\\LICENSE"
+  },
+  "isexe@2.0.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/isexe",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\isexe",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\isexe\\LICENSE"
+  },
+  "jiti@2.6.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/unjs/jiti",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\jiti",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\jiti\\LICENSE"
+  },
+  "js-yaml@4.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/nodeca/js-yaml",
+    "publisher": "Vladimir Zapparov",
+    "email": "dervus.grim@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\js-yaml",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\js-yaml\\LICENSE"
+  },
+  "json-buffer@3.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/dominictarr/json-buffer",
+    "publisher": "Dominic Tarr",
+    "email": "dominic.tarr@gmail.com",
+    "url": "http://dominictarr.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\json-buffer",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\json-buffer\\LICENSE"
+  },
+  "json-schema-traverse@0.4.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/epoberezkin/json-schema-traverse",
+    "publisher": "Evgeny Poberezkin",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\json-schema-traverse",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\json-schema-traverse\\LICENSE"
+  },
+  "json-stable-stringify-without-jsonify@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/samn/json-stable-stringify",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\json-stable-stringify-without-jsonify",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\json-stable-stringify-without-jsonify\\LICENSE"
+  },
+  "keyv@4.5.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jaredwray/keyv",
+    "publisher": "Jared Wray",
+    "email": "me@jaredwray.com",
+    "url": "http://jaredwray.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\keyv",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\keyv\\README.md"
+  },
+  "levn@0.4.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gkz/levn",
+    "publisher": "George Zahariev",
+    "email": "z@georgezahariev.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\levn",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\levn\\LICENSE"
+  },
+  "lightningcss-win32-x64-msvc@1.30.2": {
+    "licenses": "MPL-2.0",
+    "repository": "https://github.com/parcel-bundler/lightningcss",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lightningcss-win32-x64-msvc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lightningcss-win32-x64-msvc\\LICENSE"
+  },
+  "lightningcss@1.30.2": {
+    "licenses": "MPL-2.0",
+    "repository": "https://github.com/parcel-bundler/lightningcss",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lightningcss",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lightningcss\\LICENSE"
+  },
+  "linkify-it@5.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/markdown-it/linkify-it",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\linkify-it",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\linkify-it\\LICENSE"
+  },
+  "locate-path@6.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/locate-path",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\locate-path",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\locate-path\\license"
+  },
+  "lodash.merge@4.6.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lodash/lodash",
+    "publisher": "John-David Dalton",
+    "email": "john.david.dalton@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lodash.merge",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lodash.merge\\LICENSE"
+  },
+  "lunr@2.3.9": {
+    "licenses": "MIT",
+    "repository": "https://github.com/olivernn/lunr.js",
+    "publisher": "Oliver Nightingale",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lunr",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\lunr\\LICENSE"
+  },
+  "magic-string@0.30.21": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Rich-Harris/magic-string",
+    "publisher": "Rich Harris",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\magic-string",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\magic-string\\LICENSE"
+  },
+  "markdown-it@14.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/markdown-it/markdown-it",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\markdown-it",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\markdown-it\\LICENSE"
+  },
+  "mdurl@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/markdown-it/mdurl",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\mdurl",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\mdurl\\LICENSE"
+  },
+  "micromatch@4.0.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/micromatch",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\micromatch",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\micromatch\\LICENSE"
+  },
+  "minimatch@10.2.2": {
+    "licenses": "BlueOak-1.0.0",
+    "repository": "https://github.com/isaacs/minimatch",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\minimatch",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\minimatch\\LICENSE.md"
+  },
+  "minimatch@3.1.5": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/minimatch",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-array\\node_modules\\minimatch",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@eslint\\config-array\\node_modules\\minimatch\\LICENSE"
+  },
+  "minimatch@9.0.9": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/minimatch",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typedoc\\node_modules\\minimatch",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typedoc\\node_modules\\minimatch\\LICENSE"
+  },
+  "ms@2.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/vercel/ms",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ms",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ms\\license.md"
+  },
+  "nanoid@3.3.11": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ai/nanoid",
+    "publisher": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\nanoid",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\nanoid\\LICENSE"
+  },
+  "natural-compare@1.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/litejs/natural-compare-lite",
+    "publisher": "Lauri Rooden",
+    "url": "https://github.com/litejs/natural-compare-lite",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\natural-compare",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\natural-compare\\README.md"
+  },
+  "node-addon-api@7.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/nodejs/node-addon-api",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\node-addon-api",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\node-addon-api\\LICENSE.md"
+  },
+  "optionator@0.9.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gkz/optionator",
+    "publisher": "George Zahariev",
+    "email": "z@georgezahariev.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\optionator",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\optionator\\LICENSE"
+  },
+  "p-limit@3.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/p-limit",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\p-limit",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\p-limit\\license"
+  },
+  "p-locate@5.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/p-locate",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\p-locate",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\p-locate\\license"
+  },
+  "parent-module@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/parent-module",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\parent-module",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\parent-module\\license"
+  },
+  "path-exists@4.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/path-exists",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\path-exists",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\path-exists\\license"
+  },
+  "path-key@3.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/path-key",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\path-key",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\path-key\\license"
+  },
+  "picocolors@1.1.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/alexeyraspopov/picocolors",
+    "publisher": "Alexey Raspopov",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\picocolors",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\picocolors\\LICENSE"
+  },
+  "picomatch@2.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/picomatch",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\picomatch",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\picomatch\\LICENSE"
+  },
+  "picomatch@4.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/picomatch",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tinyglobby\\node_modules\\picomatch",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tinyglobby\\node_modules\\picomatch\\LICENSE"
+  },
+  "platformer@1.0.0": {
+    "licenses": "Apache-2.0",
+    "publisher": "Nikita Polivanchuk",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\LICENSE"
+  },
+  "postcss@8.5.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/postcss/postcss",
+    "publisher": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\postcss",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\postcss\\LICENSE"
+  },
+  "prelude-ls@1.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gkz/prelude-ls",
+    "publisher": "George Zahariev",
+    "email": "z@georgezahariev.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\prelude-ls",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\prelude-ls\\LICENSE"
+  },
+  "prettier-linter-helpers@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/prettier/prettier-linter-helpers",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\prettier-linter-helpers",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\prettier-linter-helpers\\LICENSE.md"
+  },
+  "prettier@3.6.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/prettier/prettier",
+    "publisher": "James Long",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\prettier",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\prettier\\LICENSE"
+  },
+  "punycode.js@2.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mathiasbynens/punycode.js",
+    "publisher": "Mathias Bynens",
+    "url": "https://mathiasbynens.be/",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\punycode.js",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\punycode.js\\LICENSE-MIT.txt"
+  },
+  "punycode@2.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mathiasbynens/punycode.js",
+    "publisher": "Mathias Bynens",
+    "url": "https://mathiasbynens.be/",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\punycode",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\punycode\\LICENSE-MIT.txt"
+  },
+  "react-dom@19.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/react",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\react-dom",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\react-dom\\LICENSE"
+  },
+  "react-hook-form@7.66.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/react-hook-form/react-hook-form",
+    "publisher": "Beier",
+    "email": "bluebill1049@hotmail.com",
+    "url": "Bill",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\react-hook-form",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\react-hook-form\\LICENSE"
+  },
+  "react-router@7.13.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/remix-run/react-router",
+    "publisher": "Remix Software",
+    "email": "hello@remix.run",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\react-router",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\react-router\\LICENSE.md"
+  },
+  "react@19.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/react",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\react",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\react\\LICENSE"
+  },
+  "readdirp@4.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/paulmillr/readdirp",
+    "publisher": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "thlorenz.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\readdirp",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\readdirp\\LICENSE"
+  },
+  "resolve-from@4.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/resolve-from",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\resolve-from",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\resolve-from\\license"
+  },
+  "rollup@4.52.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/rollup/rollup",
+    "publisher": "Rich Harris",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\rollup",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\rollup\\LICENSE.md"
+  },
+  "rxjs@7.8.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/reactivex/rxjs",
+    "publisher": "Ben Lesh",
+    "email": "ben@benlesh.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\rxjs",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\rxjs\\LICENSE.txt"
+  },
+  "sass-embedded-win32-x64@1.93.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sass/embedded-host-node",
+    "publisher": "Google Inc.",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sass-embedded-win32-x64",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sass-embedded-win32-x64\\README.md"
+  },
+  "sass-embedded@1.93.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sass/embedded-host-node",
+    "publisher": "Google Inc.",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sass-embedded",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sass-embedded\\LICENSE"
+  },
+  "sass@1.93.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sass/dart-sass",
+    "publisher": "Natalie Weizenbaum",
+    "email": "nweiz@google.com",
+    "url": "https://github.com/nex3",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sass",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sass\\LICENSE"
+  },
+  "scheduler@0.26.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/react",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\scheduler",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\scheduler\\LICENSE"
+  },
+  "semver@7.7.4": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/node-semver",
+    "publisher": "GitHub Inc.",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\semver",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\semver\\LICENSE"
+  },
+  "set-cookie-parser@2.7.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/nfriedly/set-cookie-parser",
+    "publisher": "Nathan Friedly",
+    "url": "http://nfriedly.com/",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\set-cookie-parser",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\set-cookie-parser\\LICENSE"
+  },
+  "shebang-command@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/kevva/shebang-command",
+    "publisher": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "github.com/kevva",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\shebang-command",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\shebang-command\\license"
+  },
+  "shebang-regex@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/shebang-regex",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\shebang-regex",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\shebang-regex\\license"
+  },
+  "source-map-js@1.2.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/7rulnik/source-map-js",
+    "publisher": "Valentin 7rulnik Semirulnik",
+    "email": "v7rulnik@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\source-map-js",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\source-map-js\\LICENSE"
+  },
+  "strip-json-comments@3.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/strip-json-comments",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\strip-json-comments",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\strip-json-comments\\license"
+  },
+  "supports-color@7.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/supports-color",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\supports-color",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\supports-color\\license"
+  },
+  "supports-color@8.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/supports-color",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sass-embedded\\node_modules\\supports-color",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sass-embedded\\node_modules\\supports-color\\license"
+  },
+  "sync-child-process@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sass/sync-child-process",
+    "publisher": "Google Inc.",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sync-child-process",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sync-child-process\\LICENSE"
+  },
+  "sync-message-port@1.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sass/sync-message-port",
+    "publisher": "Google Inc.",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sync-message-port",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\sync-message-port\\LICENSE"
+  },
+  "synckit@0.11.11": {
+    "licenses": "MIT",
+    "repository": "https://github.com/un-ts/synckit",
+    "publisher": "JounQin",
+    "email": "admin@1stg.me",
+    "url": "https://www.1stG.me",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\synckit",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\synckit\\LICENSE"
+  },
+  "tailwindcss@4.1.17": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/tailwindcss",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tailwindcss",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tailwindcss\\LICENSE"
+  },
+  "tapable@2.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/webpack/tapable",
+    "publisher": "Tobias Koppers @sokra",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tapable",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tapable\\LICENSE"
+  },
+  "tinyglobby@0.2.15": {
+    "licenses": "MIT",
+    "repository": "https://github.com/SuperchupuDev/tinyglobby",
+    "publisher": "Superchupu",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tinyglobby",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tinyglobby\\LICENSE"
+  },
+  "to-regex-range@5.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/to-regex-range",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\to-regex-range",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\to-regex-range\\LICENSE"
+  },
+  "ts-api-utils@2.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/JoshuaKGoldberg/ts-api-utils",
+    "publisher": "JoshuaKGoldberg",
+    "email": "npm@joshuakgoldberg.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ts-api-utils",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\ts-api-utils\\LICENSE.md"
+  },
+  "tslib@2.8.1": {
+    "licenses": "0BSD",
+    "repository": "https://github.com/Microsoft/tslib",
+    "publisher": "Microsoft Corp.",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tslib",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\tslib\\LICENSE.txt"
+  },
+  "type-check@0.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gkz/type-check",
+    "publisher": "George Zahariev",
+    "email": "z@georgezahariev.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\type-check",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\type-check\\LICENSE"
+  },
+  "typedoc@0.28.17": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/TypeStrong/TypeDoc",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typedoc",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typedoc\\LICENSE"
+  },
+  "typescript-eslint@8.56.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/typescript-eslint/typescript-eslint",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typescript-eslint",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typescript-eslint\\LICENSE"
+  },
+  "typescript@5.8.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/microsoft/TypeScript",
+    "publisher": "Microsoft Corp.",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typescript",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\typescript\\LICENSE.txt"
+  },
+  "uc.micro@2.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/markdown-it/uc.micro",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\uc.micro",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\uc.micro\\LICENSE.txt"
+  },
+  "undici-types@7.12.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/nodejs/undici",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\undici-types",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\undici-types\\LICENSE"
+  },
+  "uri-js@4.4.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/garycourt/uri-js",
+    "publisher": "Gary Court",
+    "email": "gary.court@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\uri-js",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\uri-js\\LICENSE"
+  },
+  "varint@6.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chrisdickinson/varint",
+    "publisher": "Chris Dickinson",
+    "email": "chris@neversaw.us",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\varint",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\varint\\README.md"
+  },
+  "vite@7.1.11": {
+    "licenses": "MIT",
+    "repository": "https://github.com/vitejs/vite",
+    "publisher": "Evan You",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\vite",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\vite\\LICENSE.md"
+  },
+  "which@2.0.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-which",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\which",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\which\\LICENSE"
+  },
+  "word-wrap@1.2.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/word-wrap",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\word-wrap",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\word-wrap\\LICENSE"
+  },
+  "yaml@2.8.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/eemeli/yaml",
+    "publisher": "Eemeli Aro",
+    "email": "eemeli@gmail.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\yaml",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\yaml\\LICENSE"
+  },
+  "yocto-queue@0.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/yocto-queue",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\yocto-queue",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\yocto-queue\\license"
+  },
+  "zod@4.1.12": {
+    "licenses": "MIT",
+    "repository": "https://github.com/colinhacks/zod",
+    "publisher": "Colin McDonnell",
+    "email": "zod@colinhacks.com",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\zod",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\zod\\LICENSE"
+  },
+  "zustand@5.0.9": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pmndrs/zustand",
+    "publisher": "Paul Henschel",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\zustand",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\zustand\\LICENSE"
+  }
+}

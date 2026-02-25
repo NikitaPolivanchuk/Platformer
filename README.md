@@ -57,3 +57,9 @@ Use these commands to manage the project:
 * **`npm run build`** – Runs the TypeScript compiler (`tsc`) and builds the optimized production bundle.
 * **`npm run lint`** – Scans the codebase for styling and logic errors using ESLint.
 * **`npm run preview`** – Serves the production build locally for final testing before deployment.
+
+## License
+
+This project is licensed under the [Apache 2.0](LICENSE)
+
+Author: Nikita Polivanchuk
