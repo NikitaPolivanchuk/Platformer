@@ -72,3 +72,5 @@ _Modal.Body = ModalBody;
 _Modal.Footer = ModalFooter;
 
 export default _Modal;
+
+export { ModalBackdrop, ModalPanel, ModalHeader, ModalBody, ModalFooter };

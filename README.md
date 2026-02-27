@@ -58,9 +58,29 @@ Use these commands to manage the project:
 * **`npm run lint`** – Scans the codebase for styling and logic errors using [ESLint](https://eslint.org).
 * **`npm run preview`** – Serves the production build locally for final testing before deployment.
 * **`npm run docs`** – Generates project documentation using [TypeDoc](https://typedoc.org).
+* **`npm run storybook`** – Starts the Storybook development server on port 6006 for developing and testing UI components in isolation.
+* **`npm run build-storybook`**– Builds the static Storybook site for deployment or sharing.
 
 ## License
 
-This project is licensed under the [Apache 2.0](LICENSE)
+This project is distributed under the [Apache License 2.0](LICENSE).
+
+### Third-Party Notices
+
+This project relies on the following open-source dependencies:
+
+- **caniuse-lite**  
+  The browser compatibility data provided by caniuse-lite is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). The original data source is caniuse.com.  
+  Repository: https://github.com/browserslist/caniuse-lite
+
+- **lightningcss**  
+  This project makes use of Lightning CSS, which is licensed under the Mozilla Public License 2.0 (MPL-2.0). The library is not modified and is obtained separately through the package manager during installation.  
+  Repository: https://github.com/parcel-bundler/lightningcss
+
+- **axe-core**  
+  This project uses axe-core for accessibility testing. Axe-core is licensed under the Mozilla Public License 2.0 (MPL-2.0). The library remains unmodified and is installed as an external dependency.  
+  Repository: https://github.com/dequelabs/axe-core
+
+---
 
 Author: Nikita Polivanchuk

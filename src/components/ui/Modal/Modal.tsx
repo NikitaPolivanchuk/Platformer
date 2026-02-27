@@ -1,11 +1,6 @@
 import { createPortal } from 'react-dom';
 import type { FC, ReactNode } from 'react';
 
-const root = document.getElementById('modal-root');
-if (!root) {
-  throw new Error('Modal root is missing');
-}
-
 /**
  * Props for {@link Modal}.
  */
@@ -32,7 +27,14 @@ export interface ModalProps {
  * Renders children into the global `root` element.
  */
 const Modal: FC<ModalProps> = ({ open, onClose, children }) => {
-  if (!open) return null;
+  if (!open) {
+    return null;
+  }
+
+  const root = document.getElementById('modal-root');
+  if (!root) {
+    throw new Error('Modal root is missing');
+  }
 
   return createPortal(
     <div
