@@ -660,6 +660,12 @@
     "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\hast",
     "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\hast\\LICENSE"
   },
+  "@types/js-cookie@3.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\js-cookie",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\@types\\js-cookie\\LICENSE"
+  },
   "@types/json-schema@7.0.15": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
@@ -1780,6 +1786,13 @@
     "repository": "https://github.com/unjs/jiti",
     "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\jiti",
     "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\jiti\\LICENSE"
+  },
+  "js-cookie@3.0.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/js-cookie/js-cookie",
+    "publisher": "Klaus Hartl",
+    "path": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\js-cookie",
+    "licenseFile": "D:\\University\\Term 6\\SDSS\\Platformer\\node_modules\\js-cookie\\LICENSE"
   },
   "js-tokens@10.0.0": {
     "licenses": "MIT",
