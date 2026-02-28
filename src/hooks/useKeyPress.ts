@@ -1,5 +1,16 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * React hook that tracks whether one or more specific keyboard keys
+ * are currently pressed.
+ *
+ * @param key - A single key (e.g. "Enter") or an array of keys to listen for.
+ * @returns `true` if any of the specified keys are currently pressed, otherwise `false`.
+ *
+ * @example
+ * const isEnterPressed = useKeyPress("Enter");
+ * const isMovementKeyPressed = useKeyPress(["ArrowUp", "w"]);
+ */
 const useKeyPress = (key: string | string[]) => {
   const [keyPressed, setKeyPressed] = useState(false);
   const keys = Array.isArray(key) ? key : [key];

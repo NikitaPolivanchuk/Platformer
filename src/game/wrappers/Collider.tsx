@@ -4,12 +4,25 @@ import useEntity from './Entity/useEntity.ts';
 import useEcs from '../ecs/useEcs.ts';
 import type ColliderComponent from '../components/ColliderComponent.ts';
 
-interface ColliderProps {
+/**
+ * Props for {@link Collider}.
+ */
+export interface ColliderProps {
+  /** Collision box size. */
   size: Size;
+
+  /** Whether collider acts as a one-way platform. */
   oneWay?: boolean;
+
+  /** Collision trigger callback. */
   onTrigger?: (self: symbol, other: symbol, phase: 'enter' | 'stay' | 'exit') => void;
 }
 
+/**
+ * Declarative collision component.
+ *
+ * Registers a ColliderComponent on the current entity.
+ */
 const Collider: FC<ColliderProps> = ({ size, oneWay = false, onTrigger }) => {
   const id = useEntity();
   const ecs = useEcs();

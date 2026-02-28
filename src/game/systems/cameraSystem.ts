@@ -2,6 +2,21 @@ import type Ecs from '../ecs';
 import type CameraComponent from '../components/CameraComponent.ts';
 import type TransformComponent from '../components/TransformComponent.ts';
 
+/**
+ * ECS system that updates camera components to follow their target entities.
+ *
+ * The camera smoothly interpolates (`lerp`) toward its target's position,
+ * applies zoom, offset, and optional world bounds clamping.
+ *
+ * @param ecs - The ECS world instance.
+ * @param ctx - Canvas 2D rendering context (used for viewport dimensions).
+ *
+ * @remarks
+ * - Only entities with a `camera` component are processed.
+ * - Camera follows the target entity's `transform` component.
+ * - Position is interpolated using linear interpolation (`lerp`).
+ * - Optional bounds restrict camera movement within world limits.
+ */
 const cameraSystem = (ecs: Ecs, ctx: CanvasRenderingContext2D) => {
   const cameras = ecs.entitiesWith('camera');
 

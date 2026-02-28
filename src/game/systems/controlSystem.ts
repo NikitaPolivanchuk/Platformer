@@ -3,8 +3,24 @@ import type RigidBodyComponent from '../components/RigidBodyComponent.ts';
 import type ControlComponent from '../components/ControlComponent.ts';
 import type TransformComponent from '../components/TransformComponent.ts';
 import type PlayerStateComponent from '../components/PlayerStateComponent.ts';
-import type { GameOptions } from '../contexts/GameOptions/GameOptions.ts';
+import type { GameOptions } from '../../store/gameOptions.ts';
 
+/**
+ * ECS system that applies player input to movement and climbing logic.
+ *
+ * Updates:
+ * - Horizontal velocity from directional input
+ * - Jumping when grounded
+ * - Climbing behavior (disables gravity while climbing)
+ *
+ * @param ecs - The ECS world instance.
+ * @param options - Game configuration and tunable variables.
+ *
+ * @remarks
+ * - Operates on entities with `transform`, `rigidbody`, and `control`.
+ * - Climbing overrides gravity.
+ * - Jump only triggers when grounded.
+ */
 const controlSystem = (ecs: Ecs, options: GameOptions) => {
   const players = ecs.entitiesWith('transform', 'rigidbody', 'control');
 

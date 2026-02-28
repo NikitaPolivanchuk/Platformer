@@ -6,15 +6,38 @@ import type AnimatedSpriteComponent from '../components/AnimatedSpriteComponent.
 import type { SpriteAnimation } from '../components/AnimatedSpriteComponent.ts';
 import { getCachedImage, loadImage } from '../ImageRegistry.ts';
 
-interface AnimatedSpriteProps {
+/**
+ * Props for {@link AnimatedSprite}.
+ */
+export interface AnimatedSpriteProps {
+  /** Image source URL. */
   src: string;
+
+  /** Rendered size. */
   size: Size;
+
+  /** Active animation key. */
   currentAnimation: string;
+
+  /** Animation configuration map. */
   animations: Record<string, SpriteAnimation>;
+
+  /** Whether animation loops. */
   loop?: boolean;
+
+  /** Whether to flip horizontally. */
   flipX?: boolean;
 }
 
+/**
+ * Declarative animated sprite component.
+ *
+ * Loads an image (with caching) and registers an
+ * AnimatedSpriteComponent on the current entity.
+ *
+ * Purely declarative — rendering and animation updates
+ * are handled by ECS systems.
+ */
 const AnimatedSprite: FC<AnimatedSpriteProps> = ({
   src,
   size,

@@ -2,10 +2,17 @@ import { type FC, useLayoutEffect } from 'react';
 import useEcs from '../ecs/useEcs.ts';
 import type BackgroundComponent from '../components/BackgroundComponent.ts';
 
-interface BackgroundProps {
+/**
+ * Props for {@link Background}.
+ */
+export interface BackgroundProps {
+  /** CSS color string. */
   color: string;
 }
 
+/**
+ * Registers a global background component.
+ */
 const Background: FC<BackgroundProps> = ({ color }) => {
   const ecs = useEcs();
 

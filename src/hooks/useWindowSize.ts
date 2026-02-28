@@ -1,5 +1,17 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * React hook that tracks the current browser window size.
+ *
+ * The hook listens to the `resize` event and updates automatically.
+ *
+ * @returns An object containing:
+ * - `width`: Current window inner width in pixels.
+ * - `height`: Current window inner height in pixels.
+ *
+ * @example
+ * const { width, height } = useWindowSize();
+ */
 const useWindowSize = () => {
   const [size, setSize] = useState({
     width: window.innerWidth,

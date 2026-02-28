@@ -16,12 +16,54 @@ import playerStateSystem from './systems/playerStateSystem.ts';
 import { useGameOptions } from '../store/gameOptions.ts';
 import { useGameState } from '../store/gameState.ts';
 
-type Props = {
+/**
+ * Props for the {@link World} component.
+ */
+export type WorldProps = {
+  /**
+   * React children rendered inside the ECS context.
+   *
+   * Typically game entities such as Player, Camera, Platforms, etc.
+   */
   children?: ReactNode;
+  /**
+   * Total size of the game world in world units.
+   *
+   * Usually calculated as:
+   * `mapWidth * tileSize` and `mapHeight * tileSize`.
+   *
+   * This value is used for:
+   * - Camera bounds calculations
+   * - Minimum zoom constraints
+   * - World clamping logic
+   */
   mapSize: Size;
 };
 
-const World: FC<Props> = ({ mapSize, children }) => {
+/**
+ * Root game world component.
+ *
+ * `World` is responsible for:
+ * - Creating and providing the ECS instance
+ * - Running the main game loop
+ * - Executing all game systems in order
+ * - Managing canvas rendering
+ * - Handling camera bounds and zoom constraints
+ * - Syncing the canvas size with the window
+ *
+ * It should wrap all game-related entities and systems.
+ *
+ * @example
+ * ```tsx
+ * <World
+ *   mapSize={{ width: 3000, height: 2000 }}
+ * >
+ *   <Player position={{ x: 100, y: 500 }} />
+ *   <Camera target={Symbol.for('player')} />
+ * </World>
+ * ```
+ */
+const World: FC<WorldProps> = ({ mapSize, children }) => {
   const { options } = useGameOptions();
   const { paused } = useGameState();
   const canvasRef = useRef<HTMLCanvasElement>(null);

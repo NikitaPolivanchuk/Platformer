@@ -5,6 +5,16 @@ import { useEffect } from 'react';
 import { type GameOptions, useGameOptions } from '../../store/gameOptions.ts';
 import { gameOptionsSchema } from '../../schemas/gameOptionsSchema.ts';
 
+/**
+ * Form component for configuring keybind settings.
+ *
+ * Integrates with react-hook-form and validates against `gameOptionsSchema`.
+ * Automatically:
+ * - Re-validates keybinds when they change
+ * - Updates global game options when the form is valid
+ *
+ * Validation errors are displayed per keybind and at the group level.
+ */
 const KeybindSettingsForm = () => {
   const { options, setOptions } = useGameOptions();
   const {
