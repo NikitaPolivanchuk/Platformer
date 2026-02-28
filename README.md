@@ -48,6 +48,11 @@ Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.co
     ```
     (This will open the game on a local port, usually http://localhost:5173/)
 
+## Useful Links
+
+- **Live Demo**: https://nikitapolivanchuk.github.io/Platformer/
+- **Documentation (TypeDoc)**: https://nikitapolivanchuk.github.io/Platformer/docs
+- **Storybook**: https://nikitapolivanchuk.github.io/Platformer/storybook
 
 ## Available Scripts
 
